@@ -29,6 +29,7 @@ class LoginRouter: LoginWireframeProtocol {
     }
     
     func moveToHome() {
-        // self.vc.present(vc, anime: true)
+        let vc = HomeRouter.createModule()
+        self.viewController?.present(vc, animated: true, completion: nil)
     }
 }

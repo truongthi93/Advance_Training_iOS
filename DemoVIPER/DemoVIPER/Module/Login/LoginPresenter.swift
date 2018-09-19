@@ -30,7 +30,6 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
         self.router.moveToHome()
     }
     
-
     func loginSucess() {
         self.view?.loginSuccess()
     }

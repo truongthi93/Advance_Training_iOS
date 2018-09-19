@@ -16,10 +16,9 @@ protocol LoginWireframeProtocol: class {
 }
 //MARK: Presenter -
 protocol LoginPresenterProtocol: class {
-
-    var interactor: LoginInteractorInputProtocol? { get set }
     func btnLoginClick()
     func okButtonAlertClick()
+    var interactor: LoginInteractorInputProtocol? { get set }
 }
 
 //MARK: Interactor -
