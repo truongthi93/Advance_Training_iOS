@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ED38C684EE2E70C76159AEC /* Pods_DemoVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B6116B03E9D887F10EF6AB /* Pods_DemoVIPER.framework */; };
 		665365D721520704007D7022 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665365D121520704007D7022 /* HomeInteractor.swift */; };
 		665365D821520704007D7022 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665365D221520704007D7022 /* HomePresenter.swift */; };
 		665365D921520704007D7022 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665365D321520704007D7022 /* HomeProtocols.swift */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B6116B03E9D887F10EF6AB /* Pods_DemoVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E1459AED14F7D4D15DAA531 /* Pods-DemoVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVIPER/Pods-DemoVIPER.release.xcconfig"; sourceTree = "<group>"; };
+		4C0C285D4744A27C4BB883E9 /* Pods-DemoVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVIPER/Pods-DemoVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		665365D121520704007D7022 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		665365D221520704007D7022 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		665365D321520704007D7022 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
@@ -51,12 +55,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED38C684EE2E70C76159AEC /* Pods_DemoVIPER.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		255F01DC7D4841DA7EA0576A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06B6116B03E9D887F10EF6AB /* Pods_DemoVIPER.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		665365D02152058C007D7022 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,11 +83,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		86CEC23D6379661A31471850 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C0C285D4744A27C4BB883E9 /* Pods-DemoVIPER.debug.xcconfig */,
+				2E1459AED14F7D4D15DAA531 /* Pods-DemoVIPER.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B9A986982151FEE90039AE09 = {
 			isa = PBXGroup;
 			children = (
 				B9A986A32151FEE90039AE09 /* DemoVIPER */,
 				B9A986A22151FEE90039AE09 /* Products */,
+				86CEC23D6379661A31471850 /* Pods */,
+				255F01DC7D4841DA7EA0576A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A986B62151FEEB0039AE09 /* Build configuration list for PBXNativeTarget "DemoVIPER" */;
 			buildPhases = (
+				82BE8C9B0D93C2CCB0472390 /* [CP] Check Pods Manifest.lock */,
 				B9A9869D2151FEE90039AE09 /* Sources */,
 				B9A9869E2151FEE90039AE09 /* Frameworks */,
 				B9A9869F2151FEE90039AE09 /* Resources */,
+				58895DC9F1943E15E776AE23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +213,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58895DC9F1943E15E776AE23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoVIPER/Pods-DemoVIPER-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoVIPER/Pods-DemoVIPER-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82BE8C9B0D93C2CCB0472390 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoVIPER-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9A9869D2151FEE90039AE09 /* Sources */ = {
@@ -338,6 +409,7 @@
 		};
 		B9A986B72151FEEB0039AE09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0C285D4744A27C4BB883E9 /* Pods-DemoVIPER.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -355,6 +427,7 @@
 		};
 		B9A986B82151FEEB0039AE09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E1459AED14F7D4D15DAA531 /* Pods-DemoVIPER.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
