@@ -16,7 +16,7 @@ import AlamofireObjectMapper
 class HomeInteractor: HomeInteractorInputProtocol {
     weak var presenter: HomeInteractorOutputProtocol?
     
-    func callAPIGetImages() -> [String] {
+    func callAPIGetImages(){
         self.getImageFromAPI { (success, list) in
             if success {
                 // show list in View
