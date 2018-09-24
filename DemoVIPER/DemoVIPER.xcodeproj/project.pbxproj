@@ -15,6 +15,11 @@
 		665365DC21520704007D7022 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665365D621520704007D7022 /* HomeViewController.xib */; };
 		68CD8A4B2158936700F83877 /* SplashbaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A4A2158936700F83877 /* SplashbaseImage.swift */; };
 		68CD8A4F2158998B00F83877 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A4E2158998B00F83877 /* Constants.swift */; };
+		68CD8A562158D7FC00F83877 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A552158D7FC00F83877 /* UIImageViewExtension.swift */; };
+		68CD8A5F2158DE3700F83877 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A5D2158DE3700F83877 /* ImageCollectionViewCell.swift */; };
+		68CD8A602158DE3700F83877 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CD8A5E2158DE3700F83877 /* ImageCollectionViewCell.xib */; };
+		68CD8A632158E35A00F83877 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A622158E35A00F83877 /* Utility.swift */; };
+		68CD8A662158EF7900F83877 /* CoreDataImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A652158EF7900F83877 /* CoreDataImage.swift */; };
 		843004F991FFD5FEFD9E7C2A /* Pods_DemoVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D7AB214AC9A5F458C6BEA2 /* Pods_DemoVIPER.framework */; };
 		B9A986A52151FEE90039AE09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A986A42151FEE90039AE09 /* AppDelegate.swift */; };
 		B9A986AD2151FEE90039AE09 /* DemoVIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9A986AB2151FEE90039AE09 /* DemoVIPER.xcdatamodeld */; };
@@ -39,6 +44,11 @@
 		665365D621520704007D7022 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		68CD8A4A2158936700F83877 /* SplashbaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashbaseImage.swift; sourceTree = "<group>"; };
 		68CD8A4E2158998B00F83877 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		68CD8A552158D7FC00F83877 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		68CD8A5D2158DE3700F83877 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		68CD8A5E2158DE3700F83877 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		68CD8A622158E35A00F83877 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		68CD8A652158EF7900F83877 /* CoreDataImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImage.swift; sourceTree = "<group>"; };
 		A6CC387C250538726C02B3E1 /* Pods-DemoVIPER.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVIPER.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVIPER/Pods-DemoVIPER.release.xcconfig"; sourceTree = "<group>"; };
 		B9A986A12151FEE90039AE09 /* DemoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A986A42151FEE90039AE09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +113,39 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		68CD8A542158D7CC00F83877 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				68CD8A552158D7FC00F83877 /* UIImageViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		68CD8A5C2158DDF100F83877 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				68CD8A5D2158DE3700F83877 /* ImageCollectionViewCell.swift */,
+				68CD8A5E2158DE3700F83877 /* ImageCollectionViewCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		68CD8A612158E32D00F83877 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				68CD8A622158E35A00F83877 /* Utility.swift */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		68CD8A642158EF4700F83877 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				68CD8A652158EF7900F83877 /* CoreDataImage.swift */,
+			);
+			path = DataStorage;
+			sourceTree = "<group>";
+		};
 		B9A986982151FEE90039AE09 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +167,9 @@
 		B9A986A32151FEE90039AE09 /* DemoVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				68CD8A642158EF4700F83877 /* DataStorage */,
+				68CD8A612158E32D00F83877 /* File */,
+				68CD8A542158D7CC00F83877 /* Extension */,
 				68CD8A4D2158996900F83877 /* Common */,
 				68CD8A492158935000F83877 /* Entity */,
 				B9A986B92151FFA70039AE09 /* Module */,
@@ -139,6 +185,7 @@
 		B9A986B92151FFA70039AE09 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				68CD8A5C2158DDF100F83877 /* ImageCell */,
 				665365D02152058C007D7022 /* Home */,
 				B9A986BA2151FFB30039AE09 /* Login */,
 			);
@@ -231,6 +278,7 @@
 				B9A986AF2151FEEB0039AE09 /* Assets.xcassets in Resources */,
 				B9A986C62151FFC80039AE09 /* LoginViewController.xib in Resources */,
 				665365DC21520704007D7022 /* HomeViewController.xib in Resources */,
+				68CD8A602158DE3700F83877 /* ImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,18 +336,22 @@
 			files = (
 				B9A986C12151FFC80039AE09 /* LoginPresenter.swift in Sources */,
 				B9A986A52151FEE90039AE09 /* AppDelegate.swift in Sources */,
+				68CD8A5F2158DE3700F83877 /* ImageCollectionViewCell.swift in Sources */,
 				B9A986C52151FFC80039AE09 /* LoginInteractor.swift in Sources */,
 				665365D721520704007D7022 /* HomeInteractor.swift in Sources */,
 				B9A986C22151FFC80039AE09 /* LoginRouter.swift in Sources */,
+				68CD8A562158D7FC00F83877 /* UIImageViewExtension.swift in Sources */,
 				B9A986C42151FFC80039AE09 /* LoginProtocols.swift in Sources */,
 				68CD8A4B2158936700F83877 /* SplashbaseImage.swift in Sources */,
 				665365D921520704007D7022 /* HomeProtocols.swift in Sources */,
+				68CD8A662158EF7900F83877 /* CoreDataImage.swift in Sources */,
 				665365D821520704007D7022 /* HomePresenter.swift in Sources */,
 				B9A986C32151FFC80039AE09 /* LoginViewController.swift in Sources */,
 				B9A986AD2151FEE90039AE09 /* DemoVIPER.xcdatamodeld in Sources */,
 				68CD8A4F2158998B00F83877 /* Constants.swift in Sources */,
 				665365DA21520704007D7022 /* HomeRouter.swift in Sources */,
 				665365DB21520704007D7022 /* HomeViewController.swift in Sources */,
+				68CD8A632158E35A00F83877 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

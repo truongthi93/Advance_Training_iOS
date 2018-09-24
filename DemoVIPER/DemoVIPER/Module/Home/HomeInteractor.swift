@@ -14,6 +14,7 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 class HomeInteractor: HomeInteractorInputProtocol {
+    
     weak var presenter: HomeInteractorOutputProtocol?
     
     func callAPIGetImages(){
@@ -32,11 +33,21 @@ class HomeInteractor: HomeInteractorInputProtocol {
         let URL = Constants.linkImage
         Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[SplashbaseImage]>) in
             let forecastArray = response.result.value
-            if let forecastArray = forecastArray {
+            if let forecastArray = forecastArray{
+                CoreDataImage.shared.saveData(list: forecastArray)
                 completion(true, forecastArray)
             } else {
                 completion(false, [])
             }
         }
     }
+    
+    func deleteLocalDataImages() {
+        CoreDataImage.shared.deleteData()
+    }
+    func fecthLocalImages() {
+        let images = CoreDataImage.shared.fetchData()
+        self.presenter?.getImageLocalSuccess(list: images ?? [])
+    }
+    
 }

@@ -14,17 +14,17 @@ class Constants{
     static let correct_password = "123"
     
     // ShowAlet
-    static let showAletLoginFail = "Email or Password incorrect"
-    static let showAletAPIFail = "Get data fail"
-    static let showAletDeleteImage = "Are you sure you want to delete this?"
+    static let showAlertLoginFail = "Email or Password incorrect"
+    static let showAlertAPIFail = "Get data fail"
+    static let showAlertDeleteImage = "Are you sure you want to delete this?"
     
     // Print
     static let showPrintSaveDataFail  = "Save data fail"
     
     // Title ShowAlet
-    static let titleShowAletMessage = "Message"
-    static let buttonShowAletOK = "OK"
-    static let buttonShowAletCancel = "Cancel"
+    static let titleShowAlertMessage = "Message"
+    static let buttonShowAlertOK = "OK"
+    static let buttonShowAlertCancel = "Cancel"
     
     // String nil
     static let stringNil = ""

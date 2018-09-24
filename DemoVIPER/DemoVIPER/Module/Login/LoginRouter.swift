@@ -30,6 +30,7 @@ class LoginRouter: LoginWireframeProtocol {
     
     func moveToHome() {
         let vc = HomeRouter.createModule()
-        self.viewController?.present(vc, animated: true, completion: nil)
+        let navb = UINavigationController(rootViewController: vc)
+        self.viewController?.present(navb, animated: true, completion: nil)
     }
 }

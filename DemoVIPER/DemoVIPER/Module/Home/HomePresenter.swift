@@ -26,12 +26,23 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     }
     
     func callAPISuccess(list: [SplashbaseImage]) {
-        
+        self.view?.getImageSuccess(list: list)
     }
     
     func callAPIFail() {
-        
+        print("Get images fail.......")
     }
     
-
+    func deleteLocal() {
+        self.interactor?.deleteLocalDataImages()
+    }
+    
+    func fecthLocalImage() {
+        self.interactor?.fecthLocalImages()
+    }
+    
+    func getImageLocalSuccess(list: [SplashbaseImage]) {
+        self.view?.getLocalSuccess(list: list)
+    }
+    
 }

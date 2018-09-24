@@ -27,4 +27,8 @@ class HomeRouter: HomeWireframeProtocol {
 
         return view
     }
+    
+    @objc func logout() {
+        viewController?.dismiss(animated: true , completion: nil)
+    }
 }

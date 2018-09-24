@@ -23,14 +23,15 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     
     func loginSuccess() {
         // Move screen
-        self.showAlert()
+        showAlert()
     }
+    
     
     func showAlert() {
         // create the alert
-        let alert = UIAlertController(title: "", message: "The App will move screen...", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: Constants.titleShowAlertMessage, message: "The App will move screen...", preferredStyle: UIAlertControllerStyle.alert)
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+        alert.addAction(UIAlertAction(title: Constants.buttonShowAlertOK, style: .default, handler: { _ in
             // Move screen
             self.presenter?.okButtonAlertClick()
         }))
