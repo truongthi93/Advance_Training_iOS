@@ -12,18 +12,21 @@ import Foundation
 
 //MARK: Wireframe -
 protocol HomeWireframeProtocol: class {
-
 }
 //MARK: Presenter -
 protocol HomePresenterProtocol: class {
-
+    /* ViewController ->  Presenter*/
     var interactor: HomeInteractorInputProtocol? { get set }
+    func getImages()
+
 }
 
 //MARK: Interactor -
 protocol HomeInteractorOutputProtocol: class {
 
     /* Interactor -> Presenter */
+    func callAPISuccess(list: [SplashbaseImage])
+    func callAPIFail()
 }
 
 protocol HomeInteractorInputProtocol: class {
@@ -31,6 +34,7 @@ protocol HomeInteractorInputProtocol: class {
     var presenter: HomeInteractorOutputProtocol?  { get set }
 
     /* Presenter -> Interactor */
+    func callAPIGetImages()
 }
 
 //MARK: View -
@@ -39,4 +43,6 @@ protocol HomeViewProtocol: class {
     var presenter: HomePresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
+    func getImageFail()
+    func getImageSuccess(list: [SplashbaseImage])
 }

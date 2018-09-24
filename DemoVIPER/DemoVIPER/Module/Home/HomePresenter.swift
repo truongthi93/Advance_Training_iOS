@@ -11,7 +11,6 @@
 import UIKit
 
 class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
-
     weak private var view: HomeViewProtocol?
     var interactor: HomeInteractorInputProtocol?
     private let router: HomeWireframeProtocol
@@ -21,5 +20,18 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
         self.interactor = interactor
         self.router = router
     }
+
+    func getImages() {
+        self.interactor?.callAPIGetImages()
+    }
+    
+    func callAPISuccess(list: [SplashbaseImage]) {
+        
+    }
+    
+    func callAPIFail() {
+        
+    }
+    
 
 }

@@ -9,8 +9,34 @@
 //
 
 import UIKit
+import Alamofire
+import ObjectMapper
+import AlamofireObjectMapper
 
 class HomeInteractor: HomeInteractorInputProtocol {
-
     weak var presenter: HomeInteractorOutputProtocol?
+    
+    func callAPIGetImages() -> [String] {
+        self.getImageFromAPI { (success, list) in
+            if success {
+                // show list in View
+                self.presenter?.callAPISuccess(list: list)
+            } else {
+                // call show alert
+                self.presenter?.callAPIFail()
+            }
+        }
+    }
+    
+    func getImageFromAPI(completion: @escaping (_ result: Bool, _ images: [SplashbaseImage]) -> Void) {
+        let URL = Constants.linkImage
+        Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[SplashbaseImage]>) in
+            let forecastArray = response.result.value
+            if let forecastArray = forecastArray {
+                completion(true, forecastArray)
+            } else {
+                completion(false, [])
+            }
+        }
+    }
 }

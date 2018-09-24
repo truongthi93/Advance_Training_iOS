@@ -11,11 +11,21 @@
 import UIKit
 
 class HomeViewController: UIViewController, HomeViewProtocol {
-
 	var presenter: HomePresenterProtocol?
 
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter?.getImages()
     }
-
+    
+    func getImageFail() {
+        print("Get images fail.......")
+    }
+    
+    func getImageSuccess(list: [SplashbaseImage]) {
+        for img in list{
+            print(img.url)
+        }
+    }
 }

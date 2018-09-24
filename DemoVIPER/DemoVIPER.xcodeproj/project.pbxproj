@@ -13,6 +13,8 @@
 		665365DA21520704007D7022 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665365D421520704007D7022 /* HomeRouter.swift */; };
 		665365DB21520704007D7022 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665365D521520704007D7022 /* HomeViewController.swift */; };
 		665365DC21520704007D7022 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665365D621520704007D7022 /* HomeViewController.xib */; };
+		68CD8A4B2158936700F83877 /* SplashbaseImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A4A2158936700F83877 /* SplashbaseImage.swift */; };
+		68CD8A4F2158998B00F83877 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD8A4E2158998B00F83877 /* Constants.swift */; };
 		B9A986A52151FEE90039AE09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A986A42151FEE90039AE09 /* AppDelegate.swift */; };
 		B9A986AD2151FEE90039AE09 /* DemoVIPER.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9A986AB2151FEE90039AE09 /* DemoVIPER.xcdatamodeld */; };
 		B9A986AF2151FEEB0039AE09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A986AE2151FEEB0039AE09 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		665365D421520704007D7022 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		665365D521520704007D7022 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		665365D621520704007D7022 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		68CD8A4A2158936700F83877 /* SplashbaseImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashbaseImage.swift; sourceTree = "<group>"; };
+		68CD8A4E2158998B00F83877 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B9A986A12151FEE90039AE09 /* DemoVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A986A42151FEE90039AE09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9A986AC2151FEE90039AE09 /* DemoVIPER.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DemoVIPER.xcdatamodel; sourceTree = "<group>"; };
@@ -70,6 +74,22 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		68CD8A492158935000F83877 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				68CD8A4A2158936700F83877 /* SplashbaseImage.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		68CD8A4D2158996900F83877 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				68CD8A4E2158998B00F83877 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		B9A986982151FEE90039AE09 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +109,8 @@
 		B9A986A32151FEE90039AE09 /* DemoVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				68CD8A4D2158996900F83877 /* Common */,
+				68CD8A492158935000F83877 /* Entity */,
 				B9A986B92151FFA70039AE09 /* Module */,
 				B9A986A42151FEE90039AE09 /* AppDelegate.swift */,
 				B9A986AE2151FEEB0039AE09 /* Assets.xcassets */,
@@ -199,10 +221,12 @@
 				665365D721520704007D7022 /* HomeInteractor.swift in Sources */,
 				B9A986C22151FFC80039AE09 /* LoginRouter.swift in Sources */,
 				B9A986C42151FFC80039AE09 /* LoginProtocols.swift in Sources */,
+				68CD8A4B2158936700F83877 /* SplashbaseImage.swift in Sources */,
 				665365D921520704007D7022 /* HomeProtocols.swift in Sources */,
 				665365D821520704007D7022 /* HomePresenter.swift in Sources */,
 				B9A986C32151FFC80039AE09 /* LoginViewController.swift in Sources */,
 				B9A986AD2151FEE90039AE09 /* DemoVIPER.xcdatamodeld in Sources */,
+				68CD8A4F2158998B00F83877 /* Constants.swift in Sources */,
 				665365DA21520704007D7022 /* HomeRouter.swift in Sources */,
 				665365DB21520704007D7022 /* HomeViewController.swift in Sources */,
 			);
@@ -342,6 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoVIPER/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -359,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DemoVIPER/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
