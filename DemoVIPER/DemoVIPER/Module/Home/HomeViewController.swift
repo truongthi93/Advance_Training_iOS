@@ -56,9 +56,13 @@ class HomeViewController: UIViewController, HomeViewProtocol {
 
     }
 
+    @objc func logoutButtonClick() {
+        self.presenter?.logOut()
+    }
+
     func setUpNavigationBar() {
         self.navigationItem.title = Constants.titleImageListView
-        let logout = UIBarButtonItem(title: Constants.titleUIRightBarButtonItem, style: .plain, target: self, action: #selector(HomeRouter.logout))
+        let logout = UIBarButtonItem(title: Constants.titleUIRightBarButtonItem, style: .plain, target: self, action: #selector(HomeViewController.logoutButtonClick))
         self.navigationItem.rightBarButtonItem  = logout
         
         self.navigationItem.title = Constants.titleImageListView

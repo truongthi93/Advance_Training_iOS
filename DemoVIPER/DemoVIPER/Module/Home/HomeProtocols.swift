@@ -12,6 +12,7 @@ import Foundation
 
 //MARK: Wireframe -
 protocol HomeWireframeProtocol: class {
+    func logout()
 }
 //MARK: Presenter -
 protocol HomePresenterProtocol: class {
@@ -20,6 +21,7 @@ protocol HomePresenterProtocol: class {
     func getImages()
     func deleteLocal()
     func fecthLocalImage()
+    func logOut()
 }
 
 //MARK: Interactor -

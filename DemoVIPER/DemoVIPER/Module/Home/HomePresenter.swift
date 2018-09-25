@@ -45,4 +45,7 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
         self.view?.getLocalSuccess(list: list)
     }
     
+    func logOut() {
+        self.router.logout()
+    }
 }
