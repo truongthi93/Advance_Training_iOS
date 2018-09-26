@@ -1,34 +1,39 @@
-// Based on Swift 1.2, ObjectMapper 0.15, RealmSwift 0.94.1
-// Author: Timo Wälisch <timo@waelisch.de>
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class ArrayTransform<T> : TransformType where T:Mappable {
-    typealias Object = Array<T>
-    typealias JSON = [AnyObject]
+infix operator <-
+
+/// Object of Realm's List type
+public func <- <T: Mappable>(left: List<T>, right: Map) {
+    var array: [T]?
     
-    let mapper = Mapper<T>()
-    
-    func transformFromJSON(_ value: Any?) -> Object? {
-        var results = Array<T>()
-        if let value = value as? [AnyObject] {
-            for json in value {
-                if let obj = mapper.map(JSONObject: json) {
-                    results.append(obj)
-                }
-            }
-        }
-        return results
+    if right.mappingType == .toJSON {
+        array = Array(left)
     }
     
-    func transformToJSON(_ value: Object?) -> JSON? {
-        var results = [AnyObject]()
-        if let value = value {
-            for obj in value {
-                let json = mapper.toJSON(obj)
-                results.append(json as AnyObject)
-            }
+    array <- right
+    
+    if right.mappingType == .fromJSON {
+        if let theArray = array {
+            left.append(objectsIn: theArray)
         }
-        return results
+    }
+}
+
+/// Object of Realm's RealmOptional type
+public func <- <T>(left: RealmOptional<T>, right: Map) {
+    var optional: T?
+    
+    if right.mappingType == .toJSON {
+        optional = left.value
+    }
+    
+    optional <- right
+    
+    if right.mappingType == .fromJSON {
+        if let theOptional = optional {
+            left.value = theOptional
+        }
     }
 }

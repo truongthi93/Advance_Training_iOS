@@ -6,48 +6,28 @@
 //  Copyright © 2018 UIT. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class ColumnsItem: NSObject, Mappable {
+class ColumnsItem: Object, Mappable {
     var alignment: String? = ""
     var contentType: String? = ""
     var height: Int? = 0
     var percentWidth: Int? = 0
     var verticalAlignment: String? = ""
-    var parameter: [Parameter]? = []
-    
-    override init() {
-    }
-    
-    init(alignment: String, contentType: String, height: Int,percentWidth: Int, verticalAlignment: String, parameter: [Parameter]) {
-        self.alignment = alignment
-        self.contentType = contentType
-        self.height = height
-        self.percentWidth = percentWidth
-        self.verticalAlignment = verticalAlignment
-        self.parameter = parameter
-    }
-    
-    required init?(map: Map) {
-        //Optional
-        parameter <- (map["parameter"], ArrayTransform())
-        //String
-        alignment <- map["alignment"]
-        contentType <- map["contentType"]
-        height <- map["height"]
-        percentWidth <- map["percentWidth"]
-        verticalAlignment <- map["verticalAlignment"]
-    }
+    var parameter = List<Parameter>()
     
     func mapping(map: Map) {
-        //Optional
-        parameter <- (map["parameter"], ArrayTransform())
-        //String
+        parameter <- map["parameter"]
         alignment <- map["alignment"]
         contentType <- map["contentType"]
         height <- map["height"]
         percentWidth <- map["percentWidth"]
         verticalAlignment <- map["verticalAlignment"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
 }

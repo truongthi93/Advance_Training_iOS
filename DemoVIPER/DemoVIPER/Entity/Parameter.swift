@@ -6,10 +6,11 @@
 //  Copyright © 2018 UIT. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class Parameter: NSObject, Mappable {
+class Parameter: Object, Mappable {
 
     var text: String? = ""
     var fontStyle: String? = ""
@@ -30,52 +31,7 @@ class Parameter: NSObject, Mappable {
     var titleFontSize: String? = ""
     var titleFontStyle: String? = ""
     
-    override init() {
-    }
-    
-    init(text: String, fontStyle: String, fontSize: String, fontName: String, fontColor: String, backgroundColor: String, icon: String, timeStamp: String, timeStampFontColor: String, timeStampFontName: String, timeStampFontSize: String, timeStampFontStyle: String, title: String, titleFontColor: String, titleFontName: String, titleFontSize: String, titleFontStyle: String) {
-        self.text = text
-        self.fontStyle = fontStyle
-        self.fontSize = fontSize
-        self.fontName = fontName
-        self.fontColor = fontColor
-        self.backgroundColor = backgroundColor
-        self.icon = icon
-        self.timeStamp = timeStamp
-        self.timeStampFontColor = timeStampFontColor
-        self.timeStampFontName = timeStampFontName
-        self.timeStampFontSize = timeStampFontSize
-        self.timeStampFontStyle = timeStampFontStyle
-        self.title = title
-        self.titleFontColor = titleFontColor
-        self.titleFontName = titleFontName
-        self.titleFontSize = titleFontSize
-        self.titleFontStyle = titleFontStyle
-    }
-    
-    required init?(map: Map) {
-        //String
-        text <- map["text"]
-        fontStyle <- map["fontStyle"]
-        fontSize <- map["fontSize"]
-        fontName <- map["fontName"]
-        fontColor <- map["fontColor"]
-        backgroundColor <- map["backgroundColor"]
-        icon <- map["icon"]
-        timeStamp <- map["timeStamp"]
-        timeStampFontColor <- map["timeStampFontColor"]
-        timeStampFontName <- map["timeStampFontName"]
-        timeStampFontSize <- map["timeStampFontSize"]
-        timeStampFontStyle  <- map["timeStampFontStyle"]
-        title <- map["title"]
-        titleFontColor <- map["titleFontColor"]
-        titleFontName <- map["titleFontName"]
-        titleFontSize <- map["titleFontSize"]
-        titleFontStyle <- map["titleFontStyle"]
-    }
-    
     func mapping(map: Map) {
-        //String
         text <- map["text"]
         fontStyle <- map["fontStyle"]
         fontSize <- map["fontSize"]
@@ -94,4 +50,9 @@ class Parameter: NSObject, Mappable {
         titleFontSize <- map["titleFontSize"]
         titleFontStyle <- map["titleFontStyle"]
     }
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
 }

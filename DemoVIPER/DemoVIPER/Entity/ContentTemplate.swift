@@ -6,10 +6,11 @@
 //  Copyright © 2018 UIT. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class ContentTemplate: Mappable {
+class ContentTemplate: Object, Mappable {
     
     var templateBody: [TemplateBody]? = []
     var templateBtn: [TemplateBtn]? = []
@@ -17,31 +18,14 @@ class ContentTemplate: Mappable {
     var templateVersion: Int = 0
     
     
-    init() {
-    }
-    
-    init(templateBody: [TemplateBody], templateBtn: [TemplateBtn], templateID: String, templateVersion: Int) {
-        self.templateBody = templateBody
-        self.templateBtn = templateBtn
-        self.templateID = templateID
-        self.templateVersion = templateVersion
-    }
-    
-    required init?(map: Map) {
-        //Optional
-        templateBody <- (map["templateBody"], ArrayTransform<TemplateBody>())
-        templateBtn <- (map["templateBtn"], ArrayTransform<TemplateBtn>())
-        //String
-        templateID <- map["templateID"]
-        templateVersion <- map["templateVersion"]
-    }
-    
     func mapping(map: Map) {
-        //Optional
-        templateBody <- (map["templateBody"], ArrayTransform<TemplateBody>())
-        templateBtn <- (map["templateBtn"], ArrayTransform<TemplateBtn>())
-        //String
+        templateBody <- map["templateBody"]
+        templateBtn <- map["templateBtn"]
         templateID <- map["templateID"]
         templateVersion <- map["templateVersion"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
 }

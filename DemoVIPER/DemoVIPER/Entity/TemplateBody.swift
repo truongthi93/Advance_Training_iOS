@@ -6,36 +6,23 @@
 //  Copyright © 2018 UIT. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class TemplateBody: Mappable {
+class TemplateBody: Object, Mappable {
     
     var iframeProperty: [IframeProperty]? = []
     var templateLines: [TemplateLinesItem]? = []
     var templateType: String? = ""
     
-    init() {
-    }
-    
-    init(iframeProperty: [IframeProperty],templateLines: [TemplateLinesItem], templateType: String) {
-        self.iframeProperty = iframeProperty
-        self.templateLines = templateLines
-        self.templateType = templateType
-    }
-    
-    required init?(map: Map) {
-        //Optional
-        iframeProperty <- (map["iframeProperty"], ArrayTransform())
-        templateLines <- (map["templateLines"], ArrayTransform())
-        templateType <- map["templateType"]
-
-    }
-    
     func mapping(map: Map) {
-        //Optional
-        iframeProperty <- (map["iframeProperty"], ArrayTransform())
-        templateLines <- (map["templateLines"], ArrayTransform())
+        templateType <- map["iframeProperty"]
+        templateType <- map["templateLines"]
         templateType <- map["templateType"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
 }

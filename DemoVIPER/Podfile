@@ -8,6 +8,7 @@ target 'DemoVIPER' do
   pod 'SwiftyJSON'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
+  pod 'RealmSwift'
 
   # Pods for DemoVIPER
 

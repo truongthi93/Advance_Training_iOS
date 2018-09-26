@@ -6,10 +6,11 @@
 //  Copyright © 2018 UIT. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class TemplateBtn: NSObject, Mappable {
+class TemplateBtn: Object, Mappable {
     var cancel: [CancelItem]? = nil
     var complete: [CompleteItem]? = nil
     var expire: [ExpireItem]? = nil
@@ -17,38 +18,17 @@ class TemplateBtn: NSObject, Mappable {
     var new: [NewItem]? = []
     var labelSet: String? = ""
  
-    override init() {
-    }
-    
-    init(cancel: [CancelItem], complete: [CompleteItem], expire: [ExpireItem], fail: [FailItem], new: [NewItem], labelSet: String) {
-        self.cancel = cancel
-        self.complete = complete
-        self.expire = expire
-        self.fail = fail
-        self.new = new
-        self.labelSet = labelSet
-    }
-    
-    required init?(map: Map) {
-        //Optional
-        cancel <- (map["cancel"], ArrayTransform())
-        complete <- (map["complete"], ArrayTransform())
-        expire <- (map["expire"], ArrayTransform())
-        fail <- (map["fail"], ArrayTransform())
-        new <- (map["new"], ArrayTransform())
-        //String
-        labelSet <- map["labelSet"]
-    }
-    
     func mapping(map: Map) {
-        //Optional
-        cancel <- (map["cancel"], ArrayTransform())
-        complete <- (map["complete"], ArrayTransform())
-        expire <- (map["expire"], ArrayTransform())
-        fail <- (map["fail"], ArrayTransform())
-        new <- (map["new"], ArrayTransform())
-        //String
+        cancel <- map["cancel"]
+        complete <- map["complete"]
+        expire <- map["expire"]
+        fail <- map["fail"]
+        new <- map["new"]
         labelSet <- map["labelSet"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
 }
 

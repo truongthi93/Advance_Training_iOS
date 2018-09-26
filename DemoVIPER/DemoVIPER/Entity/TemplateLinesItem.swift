@@ -6,32 +6,20 @@
 //  Copyright © 2018 UIT. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RealmSwift
 import ObjectMapper
 
-class TemplateLinesItem: NSObject, Mappable{
+class TemplateLinesItem: Object, Mappable{
     var columns: [ColumnsItem]? = []
     var lineType: String? = ""
     
-    override init() {
-    }
-    
-    init(columns: [ColumnsItem],lineType: String) {
-        self.columns = columns
-        self.lineType = lineType
-    }
-    
-    required init?(map: Map) {
-        //Optional
-        columns <- (map["columns"], ArrayTransform())
-        //String
-        lineType <- map["lineType"]
-    }
-    
     func mapping(map: Map) {
-        //Optional
-        columns <- (map["columns"], ArrayTransform())
-        //String
+        columns <- map["columns"]
         lineType <- map["lineType"]
+    }
+    
+    required convenience init?(map: Map) {
+        self.init()
     }
 }
