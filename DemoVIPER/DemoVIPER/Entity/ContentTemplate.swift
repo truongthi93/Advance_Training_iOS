@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class ContentTemplate: NSObject, Mappable {
+class ContentTemplate: Mappable {
     
     var templateBody: [TemplateBody]? = []
     var templateBtn: [TemplateBtn]? = []
@@ -17,7 +17,7 @@ class ContentTemplate: NSObject, Mappable {
     var templateVersion: Int = 0
     
     
-    override init() {
+    init() {
     }
     
     init(templateBody: [TemplateBody], templateBtn: [TemplateBtn], templateID: String, templateVersion: Int) {
@@ -28,12 +28,18 @@ class ContentTemplate: NSObject, Mappable {
     }
     
     required init?(map: Map) {
+        //Optional
+        templateBody <- (map["templateBody"], ArrayTransform<TemplateBody>())
+        templateBtn <- (map["templateBtn"], ArrayTransform<TemplateBtn>())
+        //String
+        templateID <- map["templateID"]
+        templateVersion <- map["templateVersion"]
     }
     
     func mapping(map: Map) {
         //Optional
-        templateBody <- (map["templateBody"], ArrayTransform())
-        templateBtn <- (map["templateBtn"], ArrayTransform())
+        templateBody <- (map["templateBody"], ArrayTransform<TemplateBody>())
+        templateBtn <- (map["templateBtn"], ArrayTransform<TemplateBtn>())
         //String
         templateID <- map["templateID"]
         templateVersion <- map["templateVersion"]

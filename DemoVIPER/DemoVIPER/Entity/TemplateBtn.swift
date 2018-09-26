@@ -30,6 +30,14 @@ class TemplateBtn: NSObject, Mappable {
     }
     
     required init?(map: Map) {
+        //Optional
+        cancel <- (map["cancel"], ArrayTransform())
+        complete <- (map["complete"], ArrayTransform())
+        expire <- (map["expire"], ArrayTransform())
+        fail <- (map["fail"], ArrayTransform())
+        new <- (map["new"], ArrayTransform())
+        //String
+        labelSet <- map["labelSet"]
     }
     
     func mapping(map: Map) {

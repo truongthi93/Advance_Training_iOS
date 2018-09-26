@@ -54,6 +54,24 @@ class Parameter: NSObject, Mappable {
     }
     
     required init?(map: Map) {
+        //String
+        text <- map["text"]
+        fontStyle <- map["fontStyle"]
+        fontSize <- map["fontSize"]
+        fontName <- map["fontName"]
+        fontColor <- map["fontColor"]
+        backgroundColor <- map["backgroundColor"]
+        icon <- map["icon"]
+        timeStamp <- map["timeStamp"]
+        timeStampFontColor <- map["timeStampFontColor"]
+        timeStampFontName <- map["timeStampFontName"]
+        timeStampFontSize <- map["timeStampFontSize"]
+        timeStampFontStyle  <- map["timeStampFontStyle"]
+        title <- map["title"]
+        titleFontColor <- map["titleFontColor"]
+        titleFontName <- map["titleFontName"]
+        titleFontSize <- map["titleFontSize"]
+        titleFontStyle <- map["titleFontStyle"]
     }
     
     func mapping(map: Map) {

@@ -15,7 +15,7 @@ class ColumnsItem: NSObject, Mappable {
     var height: Int? = 0
     var percentWidth: Int? = 0
     var verticalAlignment: String? = ""
-    var parameter: [Parameter]? = nil
+    var parameter: [Parameter]? = []
     
     override init() {
     }
@@ -30,6 +30,14 @@ class ColumnsItem: NSObject, Mappable {
     }
     
     required init?(map: Map) {
+        //Optional
+        parameter <- (map["parameter"], ArrayTransform())
+        //String
+        alignment <- map["alignment"]
+        contentType <- map["contentType"]
+        height <- map["height"]
+        percentWidth <- map["percentWidth"]
+        verticalAlignment <- map["verticalAlignment"]
     }
     
     func mapping(map: Map) {

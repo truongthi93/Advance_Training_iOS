@@ -23,6 +23,11 @@ class FailItem: NSObject, Mappable {
     }
     
     required init?(map: Map) {
+        //String
+        state <- map["state"]
+        textKey <- map["textKey"]
+        action <- map["action"]
+        icon <- map["icon"]
     }
     
     func mapping(map: Map) {

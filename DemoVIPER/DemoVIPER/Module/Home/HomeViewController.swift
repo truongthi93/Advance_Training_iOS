@@ -29,7 +29,6 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         
         self.presenter?.fecthLocalImage()
 
-        getImageJSONLocal()
     }
     
     func getImageJSONLocal() {
@@ -58,6 +57,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
             self.collectionViewImage.reloadData()
             // Delete Local
             self.presenter?.deleteLocal()
+            self.getImageJSONLocal()
+
         })
         
         // Create Cancel button with action handlder
@@ -82,9 +83,11 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         let logout = UIBarButtonItem(title: Constants.titleUIRightBarButtonItem, style: .plain, target: self, action: #selector(HomeViewController.logoutButtonClick))
         self.navigationItem.rightBarButtonItem  = logout
         
-        self.navigationItem.title = Constants.titleImageListView
         let delete = UIBarButtonItem(title: Constants.titleUILeftBarButtonItem, style: .plain, target: self, action: #selector(HomeViewController.deleteAllLocal))
-        self.navigationItem.leftBarButtonItem  = delete
+        
+        let delete1 = UIBarButtonItem(title: "Const", style: .plain, target: self, action: #selector(HomeViewController.deleteAllLocal))
+        self.navigationItem.leftBarButtonItems  = [delete, delete1]
+
     }
     
     func getImageFail() {

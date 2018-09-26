@@ -22,6 +22,10 @@ class TemplateLinesItem: NSObject, Mappable{
     }
     
     required init?(map: Map) {
+        //Optional
+        columns <- (map["columns"], ArrayTransform())
+        //String
+        lineType <- map["lineType"]
     }
     
     func mapping(map: Map) {

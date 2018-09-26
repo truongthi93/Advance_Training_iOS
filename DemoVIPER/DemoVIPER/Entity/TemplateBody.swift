@@ -9,13 +9,13 @@
 import UIKit
 import ObjectMapper
 
-class TemplateBody: NSObject, Mappable {
+class TemplateBody: Mappable {
     
     var iframeProperty: [IframeProperty]? = []
     var templateLines: [TemplateLinesItem]? = []
     var templateType: String? = ""
     
-    override init() {
+    init() {
     }
     
     init(iframeProperty: [IframeProperty],templateLines: [TemplateLinesItem], templateType: String) {
@@ -25,6 +25,11 @@ class TemplateBody: NSObject, Mappable {
     }
     
     required init?(map: Map) {
+        //Optional
+        iframeProperty <- (map["iframeProperty"], ArrayTransform())
+        templateLines <- (map["templateLines"], ArrayTransform())
+        templateType <- map["templateType"]
+
     }
     
     func mapping(map: Map) {

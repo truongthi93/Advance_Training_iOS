@@ -23,6 +23,10 @@ class IframeProperty: NSObject, Mappable{
     }
     
     required init?(map: Map) {
+        //Optional
+        templateLines <- (map["templateLines"], ArrayTransform())
+        //String
+        images <- map["images"]
     }
     
     func mapping(map: Map) {
