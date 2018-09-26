@@ -71,7 +71,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     }
     
     func getImageFail() {
-        print("Get images fail.......")
+        Utility.showAlert(message: Constants.showAlertAPIFail, context: self)
     }
     
     func getImageSuccess(list: [SplashbaseImage]) {
