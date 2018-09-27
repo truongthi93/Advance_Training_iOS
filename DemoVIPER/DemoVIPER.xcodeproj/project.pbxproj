@@ -273,9 +273,9 @@
 			children = (
 				B9A986BB2151FFC80039AE09 /* LoginPresenter.swift */,
 				B9A986BC2151FFC80039AE09 /* LoginRouter.swift */,
-				B9A986BD2151FFC80039AE09 /* LoginViewController.swift */,
 				B9A986BE2151FFC80039AE09 /* LoginProtocols.swift */,
 				B9A986BF2151FFC80039AE09 /* LoginInteractor.swift */,
+				B9A986BD2151FFC80039AE09 /* LoginViewController.swift */,
 				B9A986C02151FFC80039AE09 /* LoginViewController.xib */,
 			);
 			path = Login;

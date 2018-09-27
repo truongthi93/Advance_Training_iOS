@@ -11,6 +11,7 @@
 import UIKit
 
 class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
+
     weak private var view: HomeViewProtocol?
     var interactor: HomeInteractorInputProtocol?
     private let router: HomeWireframeProtocol
@@ -48,4 +49,8 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     func logOut() {
         self.router.logout()
     }
+    
+    func btnLogImageView() {
+    }
+    
 }

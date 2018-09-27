@@ -28,7 +28,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         collectionViewImage.register(UINib.init(nibName: Constants.nameImageCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.nameImageCollectionViewCell)
         
         self.presenter?.fecthLocalImage()
-
+        self.getImageJSONLocal()
     }
     
     func getImageJSONLocal() {
@@ -57,8 +57,6 @@ class HomeViewController: UIViewController, HomeViewProtocol {
             self.collectionViewImage.reloadData()
             // Delete Local
             self.presenter?.deleteLocal()
-            self.getImageJSONLocal()
-
         })
         
         // Create Cancel button with action handlder
@@ -77,6 +75,10 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     @objc func logoutButtonClick() {
         self.presenter?.logOut()
     }
+    
+    @objc func presentViewImage() {
+        print("Hello")
+    }
 
     func setUpNavigationBar() {
         self.navigationItem.title = Constants.titleImageListView
@@ -85,8 +87,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         
         let delete = UIBarButtonItem(title: Constants.titleUILeftBarButtonItem, style: .plain, target: self, action: #selector(HomeViewController.deleteAllLocal))
         
-        let delete1 = UIBarButtonItem(title: "Const", style: .plain, target: self, action: #selector(HomeViewController.deleteAllLocal))
-        self.navigationItem.leftBarButtonItems  = [delete, delete1]
+        let viewImage = UIBarButtonItem(title: "View", style: .plain, target: self, action: #selector(HomeViewController.presentViewImage))
+        self.navigationItem.leftBarButtonItems  = [delete, viewImage]
 
     }
     

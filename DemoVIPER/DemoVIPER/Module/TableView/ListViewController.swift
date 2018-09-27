@@ -12,7 +12,8 @@ class ListViewController: UIViewController, ListViewProtocol {
     
     var presenter: ListViewPresenterProtocol?
     
-
+    @IBOutlet weak var colectionViewSidle: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

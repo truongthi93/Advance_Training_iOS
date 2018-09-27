@@ -22,6 +22,7 @@ protocol HomePresenterProtocol: class {
     func deleteLocal()
     func fecthLocalImage()
     func logOut()
+    func btnLogImageView()
 }
 
 //MARK: Interactor -

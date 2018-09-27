@@ -32,9 +32,9 @@ class HomeRouter: HomeWireframeProtocol {
         self.viewController?.dismiss(animated: true, completion: nil)
     }
     
-//    func moveToListViewController() {
-//        let vc = HomeRouter.createModule()
-//        let navb = UINavigationController(rootViewController: vc)
-//        self.viewController?.present(navb, animated: true, completion: nil)
-//    }
+    func moveToListViewController() {
+        let vc = ListViewRouter.createModuleList()
+        let navb = UINavigationController(rootViewController: vc)
+        self.viewController?.present(navb, animated: true, completion: nil)
+    }
 }
