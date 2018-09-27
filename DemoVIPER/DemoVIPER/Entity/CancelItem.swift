@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class CancelItem: NSObject, Mappable {
+class CancelItem: Mappable {
     var state: String? = ""
     var textKey: String? = ""
     var action: Int? = 0

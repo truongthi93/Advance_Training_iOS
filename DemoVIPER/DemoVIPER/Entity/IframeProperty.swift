@@ -9,15 +9,12 @@
 import UIKit
 import ObjectMapper
 
-class IframeProperty: NSObject, Mappable{
+class IframeProperty: Mappable{
     
-    var images: String? = ""
+    var images: [String]? = []
     var templateLines: [TemplateLinesItem]? = []
-    
-    override init() {
-    }
-    
-    init(images: String, templateLines: [TemplateLinesItem]) {
+
+    init(images: [String], templateLines: [TemplateLinesItem]) {
         self.images = images
         self.templateLines = templateLines
     }

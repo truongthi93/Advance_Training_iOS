@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class ExpireItem: NSObject, Mappable {
+class ExpireItem: Mappable {
     var state: String? = ""
     var textKey: String? = ""
     var action: Int? = 0

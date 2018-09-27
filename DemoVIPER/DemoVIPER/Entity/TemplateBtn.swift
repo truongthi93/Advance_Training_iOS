@@ -9,16 +9,13 @@
 import UIKit
 import ObjectMapper
 
-class TemplateBtn: NSObject, Mappable {
+class TemplateBtn: Mappable {
     var cancel: [CancelItem]? = nil
     var complete: [CompleteItem]? = nil
     var expire: [ExpireItem]? = nil
     var fail: [FailItem]? = nil
     var new: [NewItem]? = []
     var labelSet: String? = ""
- 
-    override init() {
-    }
     
     init(cancel: [CancelItem], complete: [CompleteItem], expire: [ExpireItem], fail: [FailItem], new: [NewItem], labelSet: String) {
         self.cancel = cancel

@@ -10,15 +10,14 @@ import UIKit
 import ObjectMapper
 
 class TemplateBody: Mappable {
-    
-    var iframeProperty: [IframeProperty]? = []
+    var iframeProperty: IframeProperty?
     var templateLines: [TemplateLinesItem]? = []
     var templateType: String? = ""
     
     init() {
     }
     
-    init(iframeProperty: [IframeProperty],templateLines: [TemplateLinesItem], templateType: String) {
+    init(iframeProperty: IframeProperty,templateLines: [TemplateLinesItem], templateType: String) {
         self.iframeProperty = iframeProperty
         self.templateLines = templateLines
         self.templateType = templateType
@@ -26,7 +25,7 @@ class TemplateBody: Mappable {
     
     required init?(map: Map) {
         //Optional
-        iframeProperty <- (map["iframeProperty"], ArrayTransform())
+        iframeProperty <- map["iframeProperty"]
         templateLines <- (map["templateLines"], ArrayTransform())
         templateType <- map["templateType"]
 
@@ -34,7 +33,7 @@ class TemplateBody: Mappable {
     
     func mapping(map: Map) {
         //Optional
-        iframeProperty <- (map["iframeProperty"], ArrayTransform())
+        iframeProperty <- map["iframeProperty"]
         templateLines <- (map["templateLines"], ArrayTransform())
         templateType <- map["templateType"]
     }

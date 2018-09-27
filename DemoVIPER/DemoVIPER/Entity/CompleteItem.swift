@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class CompleteItem: NSObject, Mappable {
+class CompleteItem: Mappable {
     var state: String? = ""
     var textKey: String? = ""
     var action: Int? = 0

@@ -9,14 +9,11 @@
 import UIKit
 import ObjectMapper
 
-class NewItem: NSObject, Mappable {
+class NewItem: Mappable {
     var state: String? = ""
     var textKey: String? = ""
     var action: Int? = 0
     var icon: Int? = 0
-    
-    override init() {
-    }
     
     init(state: String, textKey: String, action: Int, icon: Int) {
         self.state = state

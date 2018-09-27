@@ -11,8 +11,8 @@ import ObjectMapper
 
 class ContentTemplate: Mappable {
     
-    var templateBody: [TemplateBody]? = []
-    var templateBtn: [TemplateBtn]? = []
+    var templateBody: TemplateBody?
+    var templateBtn: TemplateBtn?
     var templateID: String? = ""
     var templateVersion: Int = 0
     
@@ -20,7 +20,7 @@ class ContentTemplate: Mappable {
     init() {
     }
     
-    init(templateBody: [TemplateBody], templateBtn: [TemplateBtn], templateID: String, templateVersion: Int) {
+    init(templateBody: TemplateBody, templateBtn: TemplateBtn, templateID: String, templateVersion: Int) {
         self.templateBody = templateBody
         self.templateBtn = templateBtn
         self.templateID = templateID
@@ -29,8 +29,8 @@ class ContentTemplate: Mappable {
     
     required init?(map: Map) {
         //Optional
-        templateBody <- (map["templateBody"], ArrayTransform<TemplateBody>())
-        templateBtn <- (map["templateBtn"], ArrayTransform<TemplateBtn>())
+        templateBody <- (map["templateBody"])
+        templateBtn <- (map["templateBtn"])
         //String
         templateID <- map["templateID"]
         templateVersion <- map["templateVersion"]
@@ -38,10 +38,11 @@ class ContentTemplate: Mappable {
     
     func mapping(map: Map) {
         //Optional
-        templateBody <- (map["templateBody"], ArrayTransform<TemplateBody>())
-        templateBtn <- (map["templateBtn"], ArrayTransform<TemplateBtn>())
+        templateBody <- (map["templateBody"])
+        templateBtn <- (map["templateBtn"])
         //String
         templateID <- map["templateID"]
         templateVersion <- map["templateVersion"]
     }
 }
+

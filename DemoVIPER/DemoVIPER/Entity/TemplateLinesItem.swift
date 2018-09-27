@@ -9,12 +9,9 @@
 import UIKit
 import ObjectMapper
 
-class TemplateLinesItem: NSObject, Mappable{
+class TemplateLinesItem: Mappable{
     var columns: [ColumnsItem]? = []
     var lineType: String? = ""
-    
-    override init() {
-    }
     
     init(columns: [ColumnsItem],lineType: String) {
         self.columns = columns

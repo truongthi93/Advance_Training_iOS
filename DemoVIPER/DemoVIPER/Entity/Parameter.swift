@@ -9,7 +9,7 @@
 import UIKit
 import ObjectMapper
 
-class Parameter: NSObject, Mappable {
+class Parameter: Mappable {
 
     var text: String? = ""
     var fontStyle: String? = ""
@@ -29,9 +29,6 @@ class Parameter: NSObject, Mappable {
     var titleFontName: String? = ""
     var titleFontSize: String? = ""
     var titleFontStyle: String? = ""
-    
-    override init() {
-    }
     
     init(text: String, fontStyle: String, fontSize: String, fontName: String, fontColor: String, backgroundColor: String, icon: String, timeStamp: String, timeStampFontColor: String, timeStampFontName: String, timeStampFontSize: String, timeStampFontStyle: String, title: String, titleFontColor: String, titleFontName: String, titleFontSize: String, titleFontStyle: String) {
         self.text = text
