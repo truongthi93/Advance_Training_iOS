@@ -26,9 +26,7 @@ class ListViewRouter: ListViewWireframeProtocol {
         return view
     }
     func dimistView() {
-        let vc = HomeRouter.createModule()
-        let navb = UINavigationController(rootViewController: vc)
-         self.viewController?.present(navb, animated: true, completion: nil)
+         self.viewController?.navigationController?.popViewController(animated: true)
     }
 
 }

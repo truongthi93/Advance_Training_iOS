@@ -22,30 +22,15 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
         self.collectionViewImage.delegate = self
         self.collectionViewImage.dataSource = self
         self.setUpNavigationBar()
         collectionViewImage.register(UINib.init(nibName: Constants.nameImageCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.nameImageCollectionViewCell)
         
         self.presenter?.fecthLocalImage()
-        self.getImageJSONLocal()
     }
     
-    func getImageJSONLocal() {
-        guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
-        let url = URL(fileURLWithPath: path)
-        do {
-            let data = try! Data(contentsOf: url)
-            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                print(json)
-            
-            let user = Mapper<ContentTemplate>().map(JSONObject: json)
-            print(user?.templateID)
-        }
-        catch {
-            print(error)
-        }
-    }
     @objc func deleteAllLocal() {
         // Declare Alert message
         let dialogMessage = UIAlertController(title: Constants.titleShowAlertMessage, message: Constants.showAlertDeleteImage, preferredStyle: .alert)
