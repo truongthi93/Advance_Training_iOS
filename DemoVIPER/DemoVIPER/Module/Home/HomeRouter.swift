@@ -32,9 +32,10 @@ class HomeRouter: HomeWireframeProtocol {
         self.viewController?.dismiss(animated: true, completion: nil)
     }
     
-    func moveToListViewController() {
+    func moveImageView() {
         let vc = ListViewRouter.createModuleList()
-        let navb = UINavigationController(rootViewController: vc)
-        self.viewController?.present(navb, animated: true, completion: nil)
+        self.viewController?.navigationController?.pushViewController(vc, animated: true)
     }
+    
+
 }

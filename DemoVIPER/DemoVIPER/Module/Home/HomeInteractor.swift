@@ -49,4 +49,5 @@ class HomeInteractor: HomeInteractorInputProtocol {
         let images = CoreDataImage.shared.fetchData()
         self.presenter?.getImageLocalSuccess(list: images ?? [])
     }
+   
 }

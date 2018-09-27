@@ -9,13 +9,18 @@
 import Foundation
 
 class ListViewPresenter: ListViewPresenterProtocol, ListViewInteractorOutputProtocol {
+
+    var interactor: ListViewInteractorInputProtocol?
+    
     weak private var view: ListViewProtocol?
-    var interactor: ListViewInteractorOutputProtocol?
     private let router: ListViewWireframeProtocol
     
     init(interface: ListViewProtocol, interactor: ListViewInteractorInputProtocol?, router: ListViewWireframeProtocol) {
         self.view = interface
-        self.interactor = interactor as? ListViewInteractorOutputProtocol
+        self.interactor = interactor
         self.router = router
+    }
+    func dimistView() {
+        self.router.dimistView()
     }
 }

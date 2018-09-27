@@ -9,8 +9,6 @@
 import UIKit
 
 class ListViewInteractor: ListViewInteractorInputProtocol {
-    
+
     var presenter: ListViewInteractorOutputProtocol?
-    
-    
 }

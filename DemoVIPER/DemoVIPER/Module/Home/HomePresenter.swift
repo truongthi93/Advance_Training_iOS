@@ -50,7 +50,8 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
         self.router.logout()
     }
     
-    func btnLogImageView() {
+    func ImageLoad() {
+        self.router.moveImageView()
     }
     
 }

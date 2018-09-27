@@ -17,7 +17,7 @@ class ListViewRouter: ListViewWireframeProtocol {
         let view = ListViewController(nibName: nil, bundle: nil)
         let interactor = ListViewInteractor()
         let router = ListViewRouter()
-        let presenter = ListViewPresenter(interface: view as! ListViewProtocol, interactor: interactor, router: router)
+        let presenter = ListViewPresenter(interface: view as ListViewProtocol, interactor: interactor, router: router)
         
         view.presenter = presenter
         interactor.presenter = presenter
@@ -25,8 +25,10 @@ class ListViewRouter: ListViewWireframeProtocol {
         
         return view
     }
-    
-    func logout() {
-        self.viewController?.dismiss(animated: true, completion: nil)
+    func dimistView() {
+        let vc = HomeRouter.createModule()
+        let navb = UINavigationController(rootViewController: vc)
+         self.viewController?.present(navb, animated: true, completion: nil)
     }
+
 }

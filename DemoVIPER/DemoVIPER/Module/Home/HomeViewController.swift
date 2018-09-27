@@ -77,7 +77,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     }
     
     @objc func presentViewImage() {
-        print("Hello")
+        self.presenter?.ImageLoad()
     }
 
     func setUpNavigationBar() {

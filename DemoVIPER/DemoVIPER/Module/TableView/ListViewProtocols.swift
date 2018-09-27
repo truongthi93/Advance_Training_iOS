@@ -10,12 +10,13 @@ import Foundation
 
 //MARK: Wireframe -
 protocol ListViewWireframeProtocol: class {
-
+    func dimistView()
 }
 //MARK: Presenter -
 protocol ListViewPresenterProtocol: class {
     /* ViewController ->  Presenter*/
-
+    var interactor: ListViewInteractorInputProtocol? {get set}
+    func dimistView()
 }
 
 //MARK: Interactor -
