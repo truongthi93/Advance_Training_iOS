@@ -28,8 +28,20 @@ class ListViewController: UIViewController, ListViewProtocol {
         self.colectionViewSidle.dataSource = self
         
         colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
+//        ListlCollectionViewCell.resizableSnapshotView(UIScreen)
         
         self.getImageJSONLocal()
+        
+        //Image View UICollectionView horizontal paging
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = colectionViewSidle.frame.size
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 10
+        
+        colectionViewSidle.setCollectionViewLayout(layout, animated: false)
+        colectionViewSidle.isPagingEnabled = true
+        colectionViewSidle.alwaysBounceVertical = false
 
     }
 
@@ -68,13 +80,6 @@ extension ListViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-    }
-    
-    private func collectionView(collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 200)
-        
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
