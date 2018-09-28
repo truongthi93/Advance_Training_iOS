@@ -23,7 +23,6 @@ class ListViewController: UIViewController, ListViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         self.colectionViewSidle.delegate = self
         self.colectionViewSidle.dataSource = self
         
@@ -31,7 +30,15 @@ class ListViewController: UIViewController, ListViewProtocol {
 //        ListlCollectionViewCell.resizableSnapshotView(UIScreen)
         
         self.getImageJSONLocal()
-        
+        CustomImage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func CustomImage() {
         //Image View UICollectionView horizontal paging
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -42,9 +49,8 @@ class ListViewController: UIViewController, ListViewProtocol {
         colectionViewSidle.setCollectionViewLayout(layout, animated: false)
         colectionViewSidle.isPagingEnabled = true
         colectionViewSidle.alwaysBounceVertical = false
-
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

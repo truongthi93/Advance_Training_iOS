@@ -22,13 +22,29 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
 	override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = false
         self.collectionViewImage.delegate = self
         self.collectionViewImage.dataSource = self
         self.setUpNavigationBar()
         collectionViewImage.register(UINib.init(nibName: Constants.nameImageCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.nameImageCollectionViewCell)
         
         self.presenter?.fecthLocalImage()
+        CustomImage()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
+    func CustomImage() {
+        let cellSize = CGSize(width:80 , height:80)
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = cellSize
+        layout.sectionInset = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 1
+        
+        collectionViewImage.setCollectionViewLayout(layout, animated: false)
     }
     
     @objc func deleteAllLocal() {
