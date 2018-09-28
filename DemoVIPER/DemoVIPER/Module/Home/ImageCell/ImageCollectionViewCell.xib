@@ -23,10 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="184" height="119"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3pS-SJ-BwZ">
-                        <rect key="frame" x="154" y="0.0" width="30" height="30"/>
+                        <rect key="frame" x="164" y="0.0" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="5au-LI-YZi"/>
-                            <constraint firstAttribute="width" constant="30" id="dKz-Ja-kVV"/>
+                            <constraint firstAttribute="height" constant="20" id="DTy-6q-fLC"/>
+                            <constraint firstAttribute="width" constant="20" id="fVH-LW-YXX"/>
                         </constraints>
                         <state key="normal" image="btn_cancel"/>
                         <connections>
@@ -36,6 +36,8 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstItem="3pS-SJ-BwZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="J8C-IJ-cVj"/>
+                <constraint firstAttribute="trailing" secondItem="3pS-SJ-BwZ" secondAttribute="trailing" id="MUy-ua-kr3"/>
                 <constraint firstItem="3pS-SJ-BwZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RKU-BG-3KI"/>
                 <constraint firstAttribute="trailing" secondItem="3pS-SJ-BwZ" secondAttribute="trailing" id="aYy-NT-heu"/>
                 <constraint firstAttribute="bottom" secondItem="nft-EB-gvf" secondAttribute="bottom" id="aea-XK-dwE"/>
