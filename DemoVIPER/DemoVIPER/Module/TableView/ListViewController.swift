@@ -13,8 +13,8 @@ class ListViewController: UIViewController, ListViewProtocol {
     var presenter: ListViewPresenterProtocol?
     var imageList: [String]? = []
 
-    @IBOutlet weak var lbltemplateName: UILabel!
-    @IBOutlet weak var lbltemplateVersion: UILabel!
+    @IBOutlet weak var templateName: UILabel!
+    @IBOutlet weak var templateVersion: UILabel!
     @IBOutlet weak var colectionViewSidle: UICollectionView!
     
     @IBAction func btnBackView(_ sender: Any) {
@@ -28,17 +28,10 @@ class ListViewController: UIViewController, ListViewProtocol {
         self.colectionViewSidle.dataSource = self
         
         colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
+//        ListlCollectionViewCell.resizableSnapshotView(UIScreen)
         
         self.getImageJSONLocal()
-        imageHorizontalPaging()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func imageHorizontalPaging() {
+        
         //Image View UICollectionView horizontal paging
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -49,6 +42,12 @@ class ListViewController: UIViewController, ListViewProtocol {
         colectionViewSidle.setCollectionViewLayout(layout, animated: false)
         colectionViewSidle.isPagingEnabled = true
         colectionViewSidle.alwaysBounceVertical = false
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
     }
     
     func getImageJSONLocal() {
@@ -61,8 +60,8 @@ class ListViewController: UIViewController, ListViewProtocol {
             
             let user = Mapper<ContentTemplate>().map(JSONObject: json)
             print(user?.templateID ?? "")
-            self.lbltemplateName.text = user?.templateID
-            self.lbltemplateVersion.text = "\(String(describing: user?.templateVersion ?? 0))"
+            self.templateName.text = user?.templateID
+            self.templateVersion.text = "\(String(describing: user?.templateVersion ?? 0))"
             self.imageList = user?.templateBody?.iframeProperty?.images
             self.colectionViewSidle.reloadData()
         }
@@ -70,6 +69,7 @@ class ListViewController: UIViewController, ListViewProtocol {
             print(error)
         }
     }
+
 }
 
 // MARK:- UICollectionView DataSource
