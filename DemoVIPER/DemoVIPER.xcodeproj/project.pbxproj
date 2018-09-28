@@ -144,7 +144,7 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		68939101215C6D8000C05639 /* TableView */ = {
+		68939101215C6D8000C05639 /* ContentTemplateView */ = {
 			isa = PBXGroup;
 			children = (
 				68939106215C6F3300C05639 /* ListViewRouter.swift */,
@@ -156,7 +156,7 @@
 				68939110215CD5A500C05639 /* ImageCollectionView.swift */,
 				68939112215CE41000C05639 /* ListViewCell */,
 			);
-			path = TableView;
+			path = ContentTemplateView;
 			sourceTree = "<group>";
 		};
 		68939112215CE41000C05639 /* ListViewCell */ = {
@@ -278,7 +278,7 @@
 		B9A986B92151FFA70039AE09 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				68939101215C6D8000C05639 /* TableView */,
+				68939101215C6D8000C05639 /* ContentTemplateView */,
 				665365D02152058C007D7022 /* Home */,
 				B9A986BA2151FFB30039AE09 /* Login */,
 			);
