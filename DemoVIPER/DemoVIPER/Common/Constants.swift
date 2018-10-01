@@ -41,7 +41,6 @@ class Constants{
     // Nib name
     static let nameImageListView = "ImageListView"
     static let nameImageCollectionViewCell = "ImageCollectionViewCell"
-    static let nameListlCollectionViewCell = "ListlCollectionViewCell"
     static let keyPathAlamofire = "images"
     
     // Screen title
@@ -58,6 +57,4 @@ class Constants{
     
     // File name
     static let fileNameCRUD = "UserPass.txt"
-    static let fileJSON = "ContentTemplate"
-    static let formatFile = "json"
 }

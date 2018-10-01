@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         self.presenter?.fecthLocalImage()
         CustomImage()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = false
@@ -151,5 +152,5 @@ extension HomeViewController: DataCollectionProtocol {
         imageList.remove(at: indx)
         collectionViewImage.reloadData()
     }
- 
+    
 }

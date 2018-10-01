@@ -23,21 +23,15 @@ class ListViewController: UIViewController, ListViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         self.colectionViewSidle.delegate = self
         self.colectionViewSidle.dataSource = self
         
-        colectionViewSidle.register(UINib.init(nibName: Constants.nameListlCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.nameListlCollectionViewCell)
+        colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
+//        ListlCollectionViewCell.resizableSnapshotView(UIScreen)
         
         self.getImageJSONLocal()
-        CustomImage()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    func CustomImage() {
+        
         //Image View UICollectionView horizontal paging
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -48,15 +42,16 @@ class ListViewController: UIViewController, ListViewProtocol {
         colectionViewSidle.setCollectionViewLayout(layout, animated: false)
         colectionViewSidle.isPagingEnabled = true
         colectionViewSidle.alwaysBounceVertical = false
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
     
     func getImageJSONLocal() {
-        guard let path = Bundle.main.path(forResource: Constants.fileJSON, ofType: Constants.formatFile) else { return }
+        guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
         let url = URL(fileURLWithPath: path)
         do {
             let data = try! Data(contentsOf: url)
@@ -88,7 +83,7 @@ extension ListViewController : UICollectionViewDataSource, UICollectionViewDeleg
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.nameListlCollectionViewCell,for:indexPath as IndexPath) as! ListlCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListlCollectionViewCell",for:indexPath as IndexPath) as! ListlCollectionViewCell
         if let image = imageList?[indexPath.row] {
             cell.listViewImage.imageFromUrl(urlString: image)
             //cell.imageView.imageFromUrl(urlString: image)
