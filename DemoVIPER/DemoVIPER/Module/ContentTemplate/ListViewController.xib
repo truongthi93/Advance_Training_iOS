@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="DemoVIPER" customModuleProvider="target">
             <connections>
+                <outlet property="UIViewBtn" destination="3PR-Sl-13K" id="qxR-gg-thk"/>
                 <outlet property="colectionViewSidle" destination="N8q-AJ-aga" id="6Nw-pB-4kf"/>
                 <outlet property="templateName" destination="CZV-cF-Sj4" id="1XS-GJ-keW"/>
                 <outlet property="templateVersion" destination="mCA-jd-5DE" id="CZf-Uu-6f4"/>
@@ -117,6 +118,13 @@
                                 <constraint firstItem="Wgl-no-3vV" firstAttribute="top" secondItem="Dkb-Ht-DCY" secondAttribute="top" id="l2e-HE-t2Y"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PR-Sl-13K">
+                            <rect key="frame" x="20" y="558" width="335" height="60"/>
+                            <color key="backgroundColor" red="1" green="0.3921568627" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Zuj-hG-XJi"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
                         <constraint firstItem="m1z-7R-2We" firstAttribute="top" secondItem="cXV-CZ-R8F" secondAttribute="top" constant="150" id="CzU-aP-J8h">
@@ -127,10 +135,13 @@
                         <constraint firstItem="m1z-7R-2We" firstAttribute="leading" secondItem="cXV-CZ-R8F" secondAttribute="leading" id="JN1-No-U4u"/>
                         <constraint firstAttribute="bottom" secondItem="m1z-7R-2We" secondAttribute="bottom" constant="-152" id="JZA-dl-Kce"/>
                         <constraint firstAttribute="trailing" secondItem="Dkb-Ht-DCY" secondAttribute="trailing" constant="20" id="S76-NO-xwh"/>
+                        <constraint firstItem="3PR-Sl-13K" firstAttribute="leading" secondItem="cXV-CZ-R8F" secondAttribute="leading" constant="20" id="aNk-18-ewI"/>
+                        <constraint firstAttribute="trailing" secondItem="3PR-Sl-13K" secondAttribute="trailing" constant="20" id="dnj-Zn-bO3"/>
                         <constraint firstItem="Dkb-Ht-DCY" firstAttribute="leading" secondItem="cXV-CZ-R8F" secondAttribute="leading" constant="20" id="ggG-7a-D03"/>
                         <constraint firstItem="Dkb-Ht-DCY" firstAttribute="top" secondItem="cXV-CZ-R8F" secondAttribute="top" constant="120" id="ok4-oj-eOo">
                             <variation key="heightClass=regular-widthClass=regular" constant="270"/>
                         </constraint>
+                        <constraint firstItem="0xc-mG-Ug4" firstAttribute="bottom" secondItem="3PR-Sl-13K" secondAttribute="bottom" id="pku-OZ-4Cq"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="0xc-mG-Ug4"/>
                 </scrollView>

@@ -12,7 +12,7 @@ import ObjectMapper
 class ListViewController: UIViewController, ListViewProtocol {
     var presenter: ListViewPresenterProtocol?
     var imageList: [String]? = []
-
+    
     @IBOutlet weak var templateName: UILabel!
     @IBOutlet weak var templateVersion: UILabel!
     @IBOutlet weak var colectionViewSidle: UICollectionView!
@@ -20,18 +20,25 @@ class ListViewController: UIViewController, ListViewProtocol {
     @IBAction func btnBackView(_ sender: Any) {
        self.presenter?.dimistView()
     }
-
+    @IBOutlet weak var UIViewBtn: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
         self.colectionViewSidle.delegate = self
         self.colectionViewSidle.dataSource = self
         
         colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
-//        ListlCollectionViewCell.resizableSnapshotView(UIScreen)
-        
         self.getImageJSONLocal()
+        CustomImageView()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    func CustomImageView() {
         //Image View UICollectionView horizontal paging
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -44,7 +51,6 @@ class ListViewController: UIViewController, ListViewProtocol {
         colectionViewSidle.alwaysBounceVertical = false
 
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
