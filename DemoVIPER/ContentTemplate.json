@@ -1,141 +1,142 @@
 {
-        "templateID" : "Investment",
-        "templateVersion" : 1232456789,
-        "templateBody" : {
-            "templateType": "iframe",
-            "iframeProperty": {
-                "images" : ["http://thuthuatphanmem.vn/uploads/2018/05/18/hinh-nen-may-tinh-3d-cuc-dep_023904806.jpg",
-                            "http://thuthuatphanmem.vn/uploads/2018/05/18/hinh-nen-may-tinh-3d-dep_023904853.jpg",
-                            "http://thuthuatphanmem.vn/uploads/2018/05/18/hinh-nen-may-tinh-anh-sang-lap-lanh-tuyet-dep_023904900.jpg"],
-                "templateLines" : []
-            },
-            "templateLines" : [
-                               {
-                               "lineType": "normal",
-                               "columns":[
-                                          {
-                                          "contentType" : "text",
-                                          "parameter" : {
-                                          "text":"$[topic]",
-                                          "fontName": "",
-                                          "fontStyle": "bold",
-                                          "fontSize": "large",
-                                          "fontColor": "#000000"
-                                          },
-                                          "percentWidth": 100,
-                                          "height": 0,
-                                          "alignment": "left",
-                                          "verticalAlignment": "center"
-                                          },{
-                                          "parameter" : {
-                                          "text":"$[topic]",
-                                          "fontName": "",
-                                          "fontStyle": "bold",
-                                          "fontSize": "large",
-                                          "fontColor": "#000000"
-                                          },
-                                          "percentWidth": 0,
-                                          "height": 0,
-                                          "alignment": "left",
-                                          "verticalAlignment": "center"
-                                          }
-                                          ]
-                               },
-                               {
-                               "lineType": "normal",
-                               "columns":[
-                                          {
-                                          "contentType" : "titlenormal",
-                                          "parameter" : {
-                                          "icon" : "$[authorIcon]",
-                                          "title" : "$[author]",
-                                          "titleFontName" : "",
-                                          "titleFontStyle" : "bold",
-                                          "titleFontSize" : "normal",
-                                          "titleFontColor" : "#000000",
-                                          "timeStamp" : "$[createDate]",
-                                          "timeStampFontName" : "",
-                                          "timeStampFontStyle" : "bold",
-                                          "timeStampFontSize" : "normal",
-                                          "timeStampFontColor" : "#00ffcc",
-                                          "backgroundColor" : "#FFFFFF"
-                                          },
-                                          "percentWidth": 100,
-                                          "height": 0,
-                                          "alignment": "left",
-                                          "verticalAlignment": "center"
-                                          }
-                                          ]
-                               },
-                               {
-                               "lineType": "normal",
-                               "columns":[
-                                          {
-                                          "contentType" : "text",
-                                          "parameter" : {
-                                          "text":"$[body.text]",
-                                          "fontName": "",
-                                          "fontStyle": "normal",
-                                          "fontSize": "medium",
-                                          "fontColor": "#333333"
-                                          },
-                                          "percentWidth": 100,
-                                          "height": 0,
-                                          "alignment": "left",
-                                          "verticalAlignment": "center"
-                                          }
-                                          ]
-                               }
-                               ]
+    "templateID" : "Investment",
+    "templateVersion" : 1232456789,
+    "templateBody" : {
+        "templateType": "iframe",
+        "iframeProperty": {
+            "images" : ["http://thuthuatphanmem.vn/uploads/2018/05/18/hinh-nen-may-tinh-3d-cuc-dep_023904806.jpg",
+                        "http://thuthuatphanmem.vn/uploads/2018/05/18/hinh-nen-may-tinh-3d-dep_023904853.jpg",
+                        "http://thuthuatphanmem.vn/uploads/2018/05/18/hinh-nen-may-tinh-anh-sang-lap-lanh-tuyet-dep_023904900.jpg"],
+            "templateLines" : []
         },
-        "templateBtn" : {
-            "labelSet" : "Investment",
-            "new" : [
-                     {
-                     "textKey" : "#[label/reject]",
-                     "icon" : "",
-                     "state" : "enable",
-                     "action" : "cancel"
-                     },
-                     {
-                     "textKey" : "#[label/new]",
-                     "icon" : "",
-                     "state" : "enable",
-                     "action" : "submit"
-                     }
-                     ],
-            "complete" : [
-                          {
-                          "textKey" : "#[label/complete]",
-                          "icon" : "",
-                          "state" : "disable",
-                          "action" : ""
-                          }
-                          ],
-            "expire" : [
-                        {
-                        "textKey" : "#[label/expire]",
-                        "icon" : "",
-                        "state" : "disable",
-                        "action" : ""
-                        }
-                        ],
-            "fail" : [
+        "templateLines" : [
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "text",
+                                      "parameter" : {
+                                      "text":"$[topic]",
+                                      "fontName": "",
+                                      "fontStyle": "bold",
+                                      "fontSize": "large",
+                                      "fontColor": "#000000"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      },{
+                                      "parameter" : {
+                                      "text":"$[topic]",
+                                      "fontName": "",
+                                      "fontStyle": "bold",
+                                      "fontSize": "large",
+                                      "fontColor": "#000000"
+                                      },
+                                      "percentWidth": 0,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "titlenormal",
+                                      "parameter" : {
+                                      "icon" : "$[authorIcon]",
+                                      "title" : "$[author]",
+                                      "titleFontName" : "",
+                                      "titleFontStyle" : "bold",
+                                      "titleFontSize" : "normal",
+                                      "titleFontColor" : "#000000",
+                                      "timeStamp" : "$[createDate]",
+                                      "timeStampFontName" : "",
+                                      "timeStampFontStyle" : "bold",
+                                      "timeStampFontSize" : "normal",
+                                      "timeStampFontColor" : "#00ffcc",
+                                      "backgroundColor" : "#FFFFFF"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "text",
+                                      "parameter" : {
+                                      "text":"$[body.text]",
+                                      "fontName": "",
+                                      "fontStyle": "normal",
+                                      "fontSize": "medium",
+                                      "fontColor": "#333333"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           }
+                           ]
+    },
+    "templateBtn" : {
+        "labelSet" : "Investment",
+        "new" : [
+                 {
+                 "textKey" : "#[label/reject]",
+                 "icon" : "btn_cancel",
+                 "state" : "enable",
+                 "action" : "cancel"
+                 },
+                 {
+                 "textKey" : "#[label/new]",
+                 "icon" : "btn_confirm",
+                 "state" : "enable",
+                 "action" : "submit"
+                 }
+                 ],
+        "complete" : [
                       {
-                      "textKey" : "#[label/fail]",
-                      "icon" : "",
+                      "textKey" : "#[label/complete]",
+                      "icon" : "btn_confirm",
                       "state" : "disable",
                       "action" : ""
                       }
                       ],
-            "cancel" : [
-                        {
-                        "textKey" : "#[label/cancel]",
-                        "icon" : "",
-                        "state" : "disable",
-                        "action" : ""
-                        }
-                        ]
-        }
+        "expire" : [
+                    {
+                    "textKey" : "#[label/expire]",
+                    "icon" : "btn_confirm",
+                    "state" : "disable",
+                    "action" : ""
+                    }
+                    ],
+        "fail" : [
+                  {
+                  "textKey" : "#[label/fail]",
+                  "icon" : "btn_cancel",
+                  "state" : "disable",
+                  "action" : ""
+                  }
+                  ],
+        "cancel" : [
+                    {
+                    "textKey" : "label/cancel",
+                    "icon" : "btn_cancel",
+                    "state" : "disable",
+                    "action" : ""
+                    }
+                    ]
     }
+}
+
 

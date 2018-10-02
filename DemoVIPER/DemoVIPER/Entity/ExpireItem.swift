@@ -13,9 +13,9 @@ class ExpireItem: Mappable {
     var state: String? = ""
     var textKey: String? = ""
     var action: Int? = 0
-    var icon: Int? = 0
+    var icon: String? = ""
     
-    init(state: String, textKey: String, action: Int, icon: Int? = 0) {
+    init(state: String, textKey: String, action: Int, icon: String) {
         self.state = state
         self.textKey = textKey
         self.action = action
