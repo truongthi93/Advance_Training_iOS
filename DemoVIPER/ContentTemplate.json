@@ -26,18 +26,6 @@
                                       "height": 0,
                                       "alignment": "left",
                                       "verticalAlignment": "center"
-                                      },{
-                                      "parameter" : {
-                                      "text":"$[topic]",
-                                      "fontName": "",
-                                      "fontStyle": "bold",
-                                      "fontSize": "large",
-                                      "fontColor": "#000000"
-                                      },
-                                      "percentWidth": 0,
-                                      "height": 0,
-                                      "alignment": "left",
-                                      "verticalAlignment": "center"
                                       }
                                       ]
                            },

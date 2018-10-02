@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="DemoVIPER" customModuleProvider="target">
             <connections>
+                <outlet property="UITableViewDataJSON" destination="Wgl-no-3vV" id="ael-pY-1l3"/>
                 <outlet property="UIViewBtn" destination="3PR-Sl-13K" id="qxR-gg-thk"/>
                 <outlet property="colectionViewSidle" destination="N8q-AJ-aga" id="6Nw-pB-4kf"/>
                 <outlet property="templateName" destination="CZV-cF-Sj4" id="1XS-GJ-keW"/>

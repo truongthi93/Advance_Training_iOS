@@ -9,16 +9,23 @@
 import UIKit
 import ObjectMapper
 
+enum contentType : String{
+    case text
+    case titlenormal
+    case blank
+}
+
 class ListViewController: UIViewController, ListViewProtocol {
     var presenter: ListViewPresenterProtocol?
     var btnOne: OneBtnViewProtocol?
     var btnTwo: TwoBtnViewProtocol?
     var imageList: [String]? = []
-    
+    var contentTemplate: ContentTemplate? = nil
+
+    @IBOutlet weak var UITableViewDataJSON: UITableView!
     @IBOutlet weak var templateName: UILabel!
     @IBOutlet weak var templateVersion: UILabel!
     @IBOutlet weak var colectionViewSidle: UICollectionView!
-    
     @IBAction func btnBackView(_ sender: Any) {
        self.presenter?.dimistView()
     }
@@ -28,8 +35,15 @@ class ListViewController: UIViewController, ListViewProtocol {
         super.viewDidLoad()
         self.colectionViewSidle.delegate = self
         self.colectionViewSidle.dataSource = self
+        self.UITableViewDataJSON.delegate = self
+        self.UITableViewDataJSON.dataSource = self
         
         colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
+        
+        UITableViewDataJSON.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "TextCell")
+        UITableViewDataJSON.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: "TitleCell")
+        UITableViewDataJSON.register(UINib(nibName: "BlankCell", bundle: nil), forCellReuseIdentifier: "BlankCell")
+
         self.getImageJSONLocal()
         CustomImageView()
         btnView()
@@ -45,6 +59,8 @@ class ListViewController: UIViewController, ListViewProtocol {
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
             let btn = Mapper<ContentTemplate>().map(JSONObject: json)
             
+            self.contentTemplate = btn
+            self.UITableViewDataJSON.reloadData()
 //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
             if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
                 
@@ -69,6 +85,7 @@ class ListViewController: UIViewController, ListViewProtocol {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
+        self.UITableViewDataJSON.tableFooterView = UIView()
     }
     
     func CustomImageView() {
@@ -141,5 +158,53 @@ extension ListViewController : UICollectionViewDelegate {
     }
     
     private func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: IndexPath) {
+    }
+}
+
+extension ListViewController : UITableViewDataSource , UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.contentTemplate?.templateBody?.templateLines?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let list = self.contentTemplate?.templateBody?.templateLines else {
+            return UITableViewCell()
+        }
+        
+        let line = list[indexPath.row]
+        
+        switch line.columns?.first?.contentType {
+        case contentType.titlenormal.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as! TitleCell
+            return cell
+        case contentType.text.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BlankCell", for: indexPath) as! BlankCell
+            return cell
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let list = self.contentTemplate?.templateBody?.templateLines else {
+            return 0
+        }
+        
+        let line = list[indexPath.row]
+        
+        switch line.columns?.first?.contentType {
+        case contentType.titlenormal.rawValue:
+            return 74.5
+        case contentType.text.rawValue:
+            return 54
+        default:
+            return 10
+        }
     }
 }
