@@ -45,15 +45,15 @@ class ListViewController: UIViewController, ListViewProtocol {
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
             let btn = Mapper<ContentTemplate>().map(JSONObject: json)
             
-            //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
+//        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
             if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
                 
                 self.UIViewBtn.addSubview(customView)
                 customView.frame = UIViewBtn.bounds
                 customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
                 
-                //                customView.labelImageOneButtton.text = btn?.templateBtn?.cancel?.first?.textKey
-                //                customView.btnImageOneButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
+//              customView.labelImageOneButtton.text = btn?.templateBtn?.cancel?.first?.textKey
+//              customView.btnImageOneButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
                 customView.labelImageButtton.text = btn?.templateBtn?.new?.first?.textKey
                 customView.labelImageTwoButtton.text = btn?.templateBtn?.new?[1].textKey
                 
