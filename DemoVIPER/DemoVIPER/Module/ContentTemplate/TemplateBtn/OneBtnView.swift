@@ -16,19 +16,9 @@ class OneBtnView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInt()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInt()
-    }
-    private func commonInt() {
-        //we're going to do stuff here
-        Bundle.main
-        .loadNibNamed("OneBtnView", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }

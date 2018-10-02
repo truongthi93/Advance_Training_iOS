@@ -30,7 +30,16 @@ class ListViewController: UIViewController, ListViewProtocol {
         colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
         self.getImageJSONLocal()
         CustomImageView()
-        
+        btnView()
+    }
+    
+    func btnView() {
+//        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
+        if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
+            self.UIViewBtn.addSubview(customView)
+            customView.frame = UIViewBtn.bounds
+            customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,13 +71,14 @@ class ListViewController: UIViewController, ListViewProtocol {
         do {
             let data = try! Data(contentsOf: url)
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-            print(json)
-            
+//            print(json)
+            // ContentTemplate
             let user = Mapper<ContentTemplate>().map(JSONObject: json)
             print(user?.templateID ?? "")
             self.templateName.text = user?.templateID
             self.templateVersion.text = "\(String(describing: user?.templateVersion ?? 0))"
             self.imageList = user?.templateBody?.iframeProperty?.images
+         
             self.colectionViewSidle.reloadData()
         }
         catch {
