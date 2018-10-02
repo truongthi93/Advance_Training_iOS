@@ -12,6 +12,7 @@ import ObjectMapper
 class ListViewController: UIViewController, ListViewProtocol {
     var presenter: ListViewPresenterProtocol?
     var btnOne: OneBtnViewProtocol?
+    var btnTwo: TwoBtnViewProtocol?
     var imageList: [String]? = []
     
     @IBOutlet weak var templateName: UILabel!
@@ -35,28 +36,33 @@ class ListViewController: UIViewController, ListViewProtocol {
     }
     
     func btnView() {
-        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
-            self.UIViewBtn.addSubview(customView)
-            customView.frame = UIViewBtn.bounds
-            customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        // TemplateBtn
+        guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try! Data(contentsOf: url)
+            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            let btn = Mapper<ContentTemplate>().map(JSONObject: json)
             
-            //            customView.btnImageOneButton.image(for: <#T##UIControlState#>)
-            
-            // TemplateBtn
-            guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
-            let url = URL(fileURLWithPath: path)
-            do {
-                let data = try! Data(contentsOf: url)
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                let btn = Mapper<ContentTemplate>().map(JSONObject: json)
+            //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
+            if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
                 
-                customView.labelImageOneButtton.text = btn?.templateBtn?.cancel?.first?.textKey
-                customView.btnImageOneButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
-//                customView.btnImageOneButton.setImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
+                self.UIViewBtn.addSubview(customView)
+                customView.frame = UIViewBtn.bounds
+                customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+                
+                //                customView.labelImageOneButtton.text = btn?.templateBtn?.cancel?.first?.textKey
+                //                customView.btnImageOneButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
+                customView.labelImageButtton.text = btn?.templateBtn?.new?.first?.textKey
+                customView.labelImageTwoButtton.text = btn?.templateBtn?.new?[1].textKey
+                
+                customView.btnImageButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.new?.first?.icon) ?? "btn_cancel"), for: .normal)
+                customView.btnImageTwoButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.new?[1].icon) ?? "btn_confirm"), for: .normal)
             }
-            catch {
-                print(error)
-            }
+        }
+        catch {
+            print(error)
         }
     }
     

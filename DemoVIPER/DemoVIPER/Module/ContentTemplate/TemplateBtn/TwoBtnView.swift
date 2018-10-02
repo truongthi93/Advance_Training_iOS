@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol TwoBtnViewProtocol {
+    func nameLabel(name: String)
+}
+
 class TwoBtnView: UIView {
 
+    var delegate: TwoBtnViewProtocol?
+    var name = IndexPath?.self
+    
     @IBOutlet weak var btnImageButton: UIButton!
     @IBOutlet weak var btnImageTwoButton: UIButton!
     @IBOutlet weak var labelImageButtton: UILabel!
