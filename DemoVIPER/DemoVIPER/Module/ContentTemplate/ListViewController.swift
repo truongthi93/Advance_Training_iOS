@@ -27,6 +27,9 @@ class ListViewController: UIViewController, ListViewProtocol {
     var contentTemplate: ContentTemplate? = nil
     var contentTable: ContentTemplate? = nil
 
+    @IBOutlet weak var scrollView: UIScrollView!
+//    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+
     @IBOutlet weak var UITableViewDataJSON: UITableView!
     @IBOutlet weak var templateName: UILabel!
     @IBOutlet weak var templateVersion: UILabel!
@@ -52,8 +55,9 @@ class ListViewController: UIViewController, ListViewProtocol {
         self.getImageJSONLocal()
         CustomImageView()
         btnView()
+       
     }
-    
+ 
     func btnView() {
         
         // TemplateBtn
@@ -66,6 +70,27 @@ class ListViewController: UIViewController, ListViewProtocol {
             
             self.contentTemplate = btn
             self.UITableViewDataJSON.reloadData()
+            
+            
+//            var height = 0.0
+//            
+//            if let list = contentTemplate?.templateBody?.templateLines {
+//                for line in list{
+//                    switch line.columns?.first?.contentType {
+//                    case contentType.titlenormal.rawValue:
+//                        height += 74.5
+//                    case contentType.text.rawValue:
+//                        height += 54
+//                    case contentType.blank.rawValue:
+//                        height += 54
+//                    default:
+//                        height += 10
+//                    }
+//                }
+//            }
+//
+//            self.tableHeight.constant = CGFloat(height)
+            
 //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
             if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
                 

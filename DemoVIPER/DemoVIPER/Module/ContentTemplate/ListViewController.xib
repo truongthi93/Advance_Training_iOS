@@ -101,21 +101,18 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-Ht-DCY">
-                            <rect key="frame" x="20" y="120" width="335" height="725"/>
+                            <rect key="frame" x="20" y="120" width="335" height="498"/>
                             <subviews>
                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wgl-no-3vV">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="725"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="438"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="725" id="7YZ-7u-1Fm">
-                                    <variation key="heightClass=regular-widthClass=regular" constant="900"/>
-                                </constraint>
+                                <constraint firstAttribute="bottom" secondItem="Wgl-no-3vV" secondAttribute="bottom" constant="60" id="7CP-oE-FXr"/>
                                 <constraint firstAttribute="trailing" secondItem="Wgl-no-3vV" secondAttribute="trailing" id="H29-Bt-DSo"/>
                                 <constraint firstItem="Wgl-no-3vV" firstAttribute="leading" secondItem="Dkb-Ht-DCY" secondAttribute="leading" id="MWP-e1-JAA"/>
-                                <constraint firstAttribute="bottom" secondItem="Wgl-no-3vV" secondAttribute="bottom" id="igX-Rn-cvn"/>
                                 <constraint firstItem="Wgl-no-3vV" firstAttribute="top" secondItem="Dkb-Ht-DCY" secondAttribute="top" id="l2e-HE-t2Y"/>
                             </constraints>
                         </view>
@@ -128,6 +125,7 @@
                         </view>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="0xc-mG-Ug4" firstAttribute="bottom" secondItem="Dkb-Ht-DCY" secondAttribute="bottom" id="3vr-Jf-4km"/>
                         <constraint firstItem="m1z-7R-2We" firstAttribute="top" secondItem="cXV-CZ-R8F" secondAttribute="top" constant="150" id="CzU-aP-J8h">
                             <variation key="heightClass=regular-widthClass=regular" constant="300"/>
                         </constraint>
