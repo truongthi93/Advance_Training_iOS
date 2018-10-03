@@ -27,7 +27,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="lUK-1W-vE8">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUK-1W-vE8">
                     <rect key="frame" x="10" y="10" width="50" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="UC2-Ts-tF5"/>
@@ -48,14 +48,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="imageTitleCell" destination="lUK-1W-vE8" id="45K-RR-2Fb"/>
+                <outlet property="imageTitleCell" destination="lUK-1W-vE8" id="qHi-Sg-CvT"/>
                 <outlet property="labelDescriptionCell" destination="fzg-Ss-95i" id="Yz0-pG-lcZ"/>
                 <outlet property="labelTitleCell" destination="IkI-21-aUQ" id="f91-bf-J5R"/>
             </connections>
             <point key="canvasLocation" x="-56" y="278"/>
         </view>
     </objects>
-    <resources>
-        <image name="btn_cancel" width="80" height="80"/>
-    </resources>
 </document>

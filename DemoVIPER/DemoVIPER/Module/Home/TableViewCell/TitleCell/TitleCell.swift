@@ -16,7 +16,7 @@ class TitleCell: UITableViewCell {
 
     var delegate: TitleCellProtocol?
     
-    @IBOutlet weak var imageTitleCell: UIView!
+    @IBOutlet weak var imageTitleCell: UIImageView!
     @IBOutlet weak var labelTitleCell: UILabel!
     @IBOutlet weak var labelDescriptionCell: UILabel!
     

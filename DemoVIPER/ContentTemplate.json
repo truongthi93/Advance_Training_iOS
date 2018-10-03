@@ -35,7 +35,187 @@
                                       {
                                       "contentType" : "titlenormal",
                                       "parameter" : {
-                                      "icon" : "$[authorIcon]",
+                                      "icon" : "btn_confirm",
+                                      "title" : "$[author]",
+                                      "titleFontName" : "",
+                                      "titleFontStyle" : "bold",
+                                      "titleFontSize" : "normal",
+                                      "titleFontColor" : "#000000",
+                                      "timeStamp" : "$[createDate]",
+                                      "timeStampFontName" : "",
+                                      "timeStampFontStyle" : "bold",
+                                      "timeStampFontSize" : "normal",
+                                      "timeStampFontColor" : "#00ffcc",
+                                      "backgroundColor" : "#FFFFFF"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "text",
+                                      "parameter" : {
+                                      "text":"$[body.text]",
+                                      "fontName": "",
+                                      "fontStyle": "normal",
+                                      "fontSize": "medium",
+                                      "fontColor": "#333333"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "titlenormal",
+                                      "parameter" : {
+                                      "icon" : "btn_confirm",
+                                      "title" : "$[author]",
+                                      "titleFontName" : "",
+                                      "titleFontStyle" : "bold",
+                                      "titleFontSize" : "normal",
+                                      "titleFontColor" : "#000000",
+                                      "timeStamp" : "$[createDate]",
+                                      "timeStampFontName" : "",
+                                      "timeStampFontStyle" : "bold",
+                                      "timeStampFontSize" : "normal",
+                                      "timeStampFontColor" : "#00ffcc",
+                                      "backgroundColor" : "#FFFFFF"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "text",
+                                      "parameter" : {
+                                      "text":"$[body.text]",
+                                      "fontName": "",
+                                      "fontStyle": "normal",
+                                      "fontSize": "medium",
+                                      "fontColor": "#333333"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "titlenormal",
+                                      "parameter" : {
+                                      "icon" : "btn_confirm",
+                                      "title" : "$[author]",
+                                      "titleFontName" : "",
+                                      "titleFontStyle" : "bold",
+                                      "titleFontSize" : "normal",
+                                      "titleFontColor" : "#000000",
+                                      "timeStamp" : "$[createDate]",
+                                      "timeStampFontName" : "",
+                                      "timeStampFontStyle" : "bold",
+                                      "timeStampFontSize" : "normal",
+                                      "timeStampFontColor" : "#00ffcc",
+                                      "backgroundColor" : "#FFFFFF"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "text",
+                                      "parameter" : {
+                                      "text":"$[body.text]",
+                                      "fontName": "",
+                                      "fontStyle": "normal",
+                                      "fontSize": "medium",
+                                      "fontColor": "#333333"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "titlenormal",
+                                      "parameter" : {
+                                      "icon" : "btn_confirm",
+                                      "title" : "$[author]",
+                                      "titleFontName" : "",
+                                      "titleFontStyle" : "bold",
+                                      "titleFontSize" : "normal",
+                                      "titleFontColor" : "#000000",
+                                      "timeStamp" : "$[createDate]",
+                                      "timeStampFontName" : "",
+                                      "timeStampFontStyle" : "bold",
+                                      "timeStampFontSize" : "normal",
+                                      "timeStampFontColor" : "#00ffcc",
+                                      "backgroundColor" : "#FFFFFF"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "text",
+                                      "parameter" : {
+                                      "text":"$[body.text]",
+                                      "fontName": "",
+                                      "fontStyle": "normal",
+                                      "fontSize": "medium",
+                                      "fontColor": "#333333"
+                                      },
+                                      "percentWidth": 100,
+                                      "height": 0,
+                                      "alignment": "left",
+                                      "verticalAlignment": "center"
+                                      }
+                                      ]
+                           },
+                           {
+                           "lineType": "normal",
+                           "columns":[
+                                      {
+                                      "contentType" : "titlenormal",
+                                      "parameter" : {
+                                      "icon" : "btn_confirm",
                                       "title" : "$[author]",
                                       "titleFontName" : "",
                                       "titleFontStyle" : "bold",
