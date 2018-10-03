@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol BlankCellProtocol {
+    
+}
+
 class BlankCell: UITableViewCell {
 
+    var delegate: BlankCellProtocol?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

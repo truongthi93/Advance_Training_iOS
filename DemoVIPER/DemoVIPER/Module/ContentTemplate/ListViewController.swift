@@ -19,8 +19,13 @@ class ListViewController: UIViewController, ListViewProtocol {
     var presenter: ListViewPresenterProtocol?
     var btnOne: OneBtnViewProtocol?
     var btnTwo: TwoBtnViewProtocol?
+    var textCell: TextCellProtocol?
+    var blankCell: BlankCellProtocol?
+    var titleCell: TitleCellProtocol?
+    
     var imageList: [String]? = []
     var contentTemplate: ContentTemplate? = nil
+    var contentTable: ContentTemplate? = nil
 
     @IBOutlet weak var UITableViewDataJSON: UITableView!
     @IBOutlet weak var templateName: UILabel!
@@ -119,14 +124,13 @@ class ListViewController: UIViewController, ListViewProtocol {
             self.templateName.text = user?.templateID
             self.templateVersion.text = "\(String(describing: user?.templateVersion ?? 0))"
             self.imageList = user?.templateBody?.iframeProperty?.images
-            
+
             self.colectionViewSidle.reloadData()
         }
         catch {
             print(error)
         }
     }
-
 }
 
 // MARK:- UICollectionView DataSource
@@ -178,6 +182,7 @@ extension ListViewController : UITableViewDataSource , UITableViewDelegate{
         switch line.columns?.first?.contentType {
         case contentType.titlenormal.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as! TitleCell
+            
             return cell
         case contentType.text.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
@@ -202,6 +207,8 @@ extension ListViewController : UITableViewDataSource , UITableViewDelegate{
         case contentType.titlenormal.rawValue:
             return 74.5
         case contentType.text.rawValue:
+            return 54
+        case contentType.blank.rawValue:
             return 54
         default:
             return 10

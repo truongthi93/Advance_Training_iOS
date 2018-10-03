@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol TitleCellProtocol {
+    
+}
+
 class TitleCell: UITableViewCell {
 
+    var delegate: TitleCellProtocol?
+    
     @IBOutlet weak var imageTitleCell: UIView!
     @IBOutlet weak var labelTitleCell: UILabel!
     @IBOutlet weak var labelDescriptionCell: UILabel!
