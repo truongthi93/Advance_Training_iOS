@@ -152,7 +152,7 @@ extension ListViewController : UICollectionViewDataSource, UICollectionViewDeleg
     }
 }
 
-// MARK:- HomeViewController Methods
+// MARK:- ListViewController Methods
 extension ListViewController : UICollectionViewDelegate {
     private func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
     }
@@ -161,6 +161,7 @@ extension ListViewController : UICollectionViewDelegate {
     }
 }
 
+// MARK:- ListViewController Methods UITableViewDataSource UITableViewDelegate
 extension ListViewController : UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.contentTemplate?.templateBody?.templateLines?.count ?? 0
@@ -197,7 +198,6 @@ extension ListViewController : UITableViewDataSource , UITableViewDelegate{
         }
         
         let line = list[indexPath.row]
-        
         switch line.columns?.first?.contentType {
         case contentType.titlenormal.rawValue:
             return 74.5

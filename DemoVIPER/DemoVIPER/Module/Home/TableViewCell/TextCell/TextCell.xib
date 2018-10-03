@@ -20,15 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5up-m0-DJy">
-                        <rect key="frame" x="10" y="10" width="39.5" height="19"/>
+                        <rect key="frame" x="140.5" y="17.5" width="39.5" height="19"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.53725490200000003" green="0.74509803919999995" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="5up-m0-DJy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="L0Q-93-rBP"/>
-                    <constraint firstItem="5up-m0-DJy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="V6s-NR-obh"/>
+                    <constraint firstItem="5up-m0-DJy" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="GOb-u9-CGe"/>
+                    <constraint firstItem="5up-m0-DJy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yh6-Np-D6h"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -13,53 +13,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="TitleCell" customModule="DemoVIPER" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="341" height="75"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TitleCell" id="u8h-vf-rWO" customClass="TitleCell" customModule="DemoVIPER" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="89"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TitleCell" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="TitleCell" customModule="DemoVIPER" customModuleProvider="target">
-                <rect key="frame" x="0.0" y="0.0" width="341" height="74.5"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jyq-ss-3qG">
-                        <rect key="frame" x="59.5" y="43.5" width="42" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btn_cancel" translatesAutoresizingMaskIntoConstraints="NO" id="apb-Bi-UjR">
-                        <rect key="frame" x="10" y="22.5" width="29.5" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="SiK-O2-oyA"/>
-                            <constraint firstAttribute="width" secondItem="apb-Bi-UjR" secondAttribute="height" multiplier="1:1" id="XvA-bE-0Qe"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTa-93-yij">
-                        <rect key="frame" x="59.5" y="10" width="49" height="23.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </subviews>
-                <color key="backgroundColor" red="0.42321201060000002" green="0.69843270120000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                <constraints>
-                    <constraint firstItem="jyq-ss-3qG" firstAttribute="leading" secondItem="apb-Bi-UjR" secondAttribute="trailing" constant="20" id="ElT-uY-ftq"/>
-                    <constraint firstItem="apb-Bi-UjR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OFM-pp-cJy"/>
-                    <constraint firstItem="jyq-ss-3qG" firstAttribute="top" secondItem="bTa-93-yij" secondAttribute="bottom" constant="10" id="cqa-Y3-f9F"/>
-                    <constraint firstItem="apb-Bi-UjR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="e7V-Nq-GdR"/>
-                    <constraint firstItem="bTa-93-yij" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fdg-Ua-wBU"/>
-                    <constraint firstItem="bTa-93-yij" firstAttribute="leading" secondItem="apb-Bi-UjR" secondAttribute="trailing" constant="20" id="ocN-NT-nWw"/>
-                </constraints>
-            </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUK-1W-vE8">
+                    <rect key="frame" x="10" y="10" width="69" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lUK-1W-vE8" secondAttribute="height" multiplier="1:1" id="0td-Sz-99H"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzg-Ss-95i">
+                    <rect key="frame" x="109" y="40.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkI-21-aUQ">
+                    <rect key="frame" x="109" y="10" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IkI-21-aUQ" firstAttribute="leading" secondItem="lUK-1W-vE8" secondAttribute="trailing" constant="30" id="2i3-CD-Fg8"/>
+                <constraint firstItem="fzg-Ss-95i" firstAttribute="leading" secondItem="lUK-1W-vE8" secondAttribute="trailing" constant="30" id="9Lf-VG-iNG"/>
+                <constraint firstItem="lUK-1W-vE8" firstAttribute="top" secondItem="9g4-9Z-TMa" secondAttribute="top" constant="10" id="EMp-sF-Anz"/>
+                <constraint firstItem="IkI-21-aUQ" firstAttribute="top" secondItem="9g4-9Z-TMa" secondAttribute="top" constant="10" id="Ot6-gZ-NW6"/>
+                <constraint firstItem="9g4-9Z-TMa" firstAttribute="bottom" secondItem="lUK-1W-vE8" secondAttribute="bottom" constant="10" id="UEN-Eg-7k6"/>
+                <constraint firstItem="lUK-1W-vE8" firstAttribute="leading" secondItem="9g4-9Z-TMa" secondAttribute="leading" constant="10" id="e3L-1o-0pB"/>
+                <constraint firstItem="fzg-Ss-95i" firstAttribute="top" secondItem="IkI-21-aUQ" secondAttribute="bottom" constant="10" id="qQq-81-4nn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="9g4-9Z-TMa"/>
             <connections>
-                <outlet property="imageTitleCell" destination="H2p-sc-9uM" id="eRd-c5-wHq"/>
-                <outlet property="labelDescriptionCell" destination="jyq-ss-3qG" id="vMM-aV-D55"/>
-                <outlet property="labelTitleCell" destination="bTa-93-yij" id="oHu-th-7iW"/>
+                <outlet property="imageTitleCell" destination="lUK-1W-vE8" id="45K-RR-2Fb"/>
+                <outlet property="labelDescriptionCell" destination="fzg-Ss-95i" id="nJm-c9-8ZA"/>
+                <outlet property="labelTitleCell" destination="IkI-21-aUQ" id="f91-bf-J5R"/>
             </connections>
-            <point key="canvasLocation" x="14.5" y="67.5"/>
-        </tableViewCell>
+            <point key="canvasLocation" x="-56" y="281.5"/>
+        </view>
     </objects>
-    <resources>
-        <image name="btn_cancel" width="80" height="80"/>
-    </resources>
 </document>
