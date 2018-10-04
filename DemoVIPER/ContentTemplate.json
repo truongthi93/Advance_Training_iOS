@@ -80,7 +80,7 @@
                                       {
                                       "contentType" : "titlenormal",
                                       "parameter" : {
-                                      "icon" : "btn_confirm",
+                                      "icon" : "btn_cancel",
                                       "title" : "$[author2]",
                                       "titleFontName" : "",
                                       "titleFontStyle" : "bold",
@@ -215,7 +215,7 @@
                                       {
                                       "contentType" : "titlenormal",
                                       "parameter" : {
-                                      "icon" : "btn_confirm",
+                                      "icon" : "btn_cancel",
                                       "title" : "$[author5]",
                                       "titleFontName" : "",
                                       "titleFontStyle" : "bold",
@@ -305,7 +305,7 @@
                                       {
                                       "contentType" : "titlenormal",
                                       "parameter" : {
-                                      "icon" : "btn_confirm",
+                                      "icon" : "btn_cancel",
                                       "title" : "$[author7]",
                                       "titleFontName" : "",
                                       "titleFontStyle" : "bold",

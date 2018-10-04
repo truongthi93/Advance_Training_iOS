@@ -15,7 +15,7 @@ enum contentType : String{
     case blank
 }
 
-class ListViewController: UIViewController, ListViewProtocol {
+class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelegate {
     var presenter: ListViewPresenterProtocol?
     var btnOne: OneBtnViewProtocol?
     var btnTwo: TwoBtnViewProtocol?
@@ -26,10 +26,10 @@ class ListViewController: UIViewController, ListViewProtocol {
     var imageList: [String]? = []
     var contentTemplate: ContentTemplate? = nil
     var contentTable: ContentTemplate? = nil
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
-//    @IBOutlet weak var tableHeight: NSLayoutConstraint!
-
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    
     @IBOutlet weak var UITableViewDataJSON: UITableView!
     @IBOutlet weak var templateName: UILabel!
     @IBOutlet weak var templateVersion: UILabel!
@@ -55,11 +55,21 @@ class ListViewController: UIViewController, ListViewProtocol {
         self.getImageJSONLocal()
         CustomImageView()
         btnView()
-       
-    }
- 
-    func btnView() {
         
+        tableHeight.constant = self.view.frame.height-64
+        self.UITableViewDataJSON.isScrollEnabled = false
+        //no need to write following if checked in storyboard
+        self.scrollView.bounces = false
+        self.UITableViewDataJSON.bounces = true
+        
+        func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            if self.UITableViewDataJSON.contentOffset.y == self.scrollView.contentOffset.y {
+                UITableViewDataJSON.isScrollEnabled = true
+            }
+        }
+    }
+   
+    func btnView() {
         // TemplateBtn
         guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
         let url = URL(fileURLWithPath: path)
@@ -70,27 +80,7 @@ class ListViewController: UIViewController, ListViewProtocol {
             
             self.contentTemplate = btn
             self.UITableViewDataJSON.reloadData()
-            
-            
-//            var height = 0.0
-//            
-//            if let list = contentTemplate?.templateBody?.templateLines {
-//                for line in list{
-//                    switch line.columns?.first?.contentType {
-//                    case contentType.titlenormal.rawValue:
-//                        height += 74.5
-//                    case contentType.text.rawValue:
-//                        height += 54
-//                    case contentType.blank.rawValue:
-//                        height += 54
-//                    default:
-//                        height += 10
-//                    }
-//                }
-//            }
-//
-//            self.tableHeight.constant = CGFloat(height)
-            
+
 //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
             if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
                 
@@ -116,6 +106,7 @@ class ListViewController: UIViewController, ListViewProtocol {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
         self.UITableViewDataJSON.tableFooterView = UIView()
+        
     }
     
     func CustomImageView() {
@@ -175,102 +166,6 @@ class ListViewController: UIViewController, ListViewProtocol {
         }
         catch {
             print(error)
-        }
-    }
-}
-
-// MARK:- UICollectionView DataSource
-extension ListViewController : UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageList?.count ?? 0
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListlCollectionViewCell",for:indexPath as IndexPath) as! ListlCollectionViewCell
-        if let image = imageList?[indexPath.row] {
-            cell.listViewImage.imageFromUrl(urlString: image)
-            //cell.imageView.imageFromUrl(urlString: image)
-        } else {
-            cell.listViewImage.image = UIImage(named: Constants.nameImageGoogle)
-        }
-        
-        return cell
-    }
-}
-
-// MARK:- ListViewController Methods
-extension ListViewController : UICollectionViewDelegate {
-    private func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
-    }
-    
-    private func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: IndexPath) {
-    }
-}
-
-// MARK:- ListViewController Methods UITableViewDataSource UITableViewDelegate
-extension ListViewController : UITableViewDataSource , UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.contentTemplate?.templateBody?.templateLines?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let list = self.contentTemplate?.templateBody?.templateLines else {
-            return UITableViewCell()
-        }
-        
-        let line = list[indexPath.row]
-        
-        switch line.columns?.first?.contentType {
-        case contentType.titlenormal.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as! TitleCell
-            cell.labelTitleCell.text = line.columns?.first?.parameter?.title
-            cell.labelDescriptionCell.text = line.columns?.first?.parameter?.timeStamp
-            cell.labelTitleCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.titleFontColor ?? "#000000")
-            cell.labelDescriptionCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.timeStampFontColor ?? "#000000")
-            
-            let image = UIImage(named: line.columns?.first?.parameter?.icon ?? "btn_cancel")
-            cell.imageTitleCell.image = image
-            cell.backgroundView?.backgroundColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.backgroundColor ?? "#000000")
-//            let image = UIImage(named: "\(line.columns?.first?.parameter?.icon)")
-//            let imageView = UIImageView(image: image)
-//            cell.imageTitleCell.addSubview(imageView)
-
-            return cell
-        case contentType.text.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
-            cell.labelTextCell.text = line.columns?.first?.parameter?.text
-            cell.labelTextCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.fontColor ?? "#000000")
-            return cell
-        default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BlankCell", for: indexPath) as! BlankCell
-            return cell
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let list = self.contentTemplate?.templateBody?.templateLines else {
-            return 0
-        }
-        
-        let line = list[indexPath.row]
-        switch line.columns?.first?.contentType {
-        case contentType.titlenormal.rawValue:
-            return 74.5
-        case contentType.text.rawValue:
-            return 54
-        case contentType.blank.rawValue:
-            return 54
-        default:
-            return 10
         }
     }
 }

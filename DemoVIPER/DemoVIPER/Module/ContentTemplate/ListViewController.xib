@@ -15,6 +15,8 @@
                 <outlet property="UITableViewDataJSON" destination="Wgl-no-3vV" id="ael-pY-1l3"/>
                 <outlet property="UIViewBtn" destination="3PR-Sl-13K" id="qxR-gg-thk"/>
                 <outlet property="colectionViewSidle" destination="N8q-AJ-aga" id="6Nw-pB-4kf"/>
+                <outlet property="scrollView" destination="cXV-CZ-R8F" id="k0G-gq-9Na"/>
+                <outlet property="tableHeight" destination="g4A-qT-lLA" id="GoA-TW-w2p"/>
                 <outlet property="templateName" destination="CZV-cF-Sj4" id="1XS-GJ-keW"/>
                 <outlet property="templateVersion" destination="mCA-jd-5DE" id="CZf-Uu-6f4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -103,9 +105,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkb-Ht-DCY">
                             <rect key="frame" x="20" y="120" width="335" height="498"/>
                             <subviews>
-                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wgl-no-3vV">
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wgl-no-3vV">
                                     <rect key="frame" x="0.0" y="0.0" width="335" height="438"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="438" id="g4A-qT-lLA"/>
+                                    </constraints>
                                 </tableView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
