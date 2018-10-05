@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  DemoVIPER
+
+  Created by Bao Ngo Mau on 10/5/18.
+  Copyright © 2018 UIT. All rights reserved.
+*/
+
+"showAlertLoginFail" = "Email hoặc mật khẩu chưa đúng";
+"showAlertAPIFail" = "Bị lỗi khi lấy dữ liệu!";
+"showAlertDeleteImage" = "Bạn có chắc chắn muốn xoá?";
+"showAlertSucessFull" = "Nhấn để đăng nhập";
+// Print
+"showPrintSaveDataFail"  = "Lưu dữ liệu bị lỗi!";
+
+// Title ShowAlet
+"titleShowAlertMessage" = "Thông báo";
+"buttonShowAlertOK" = "Đồng ý";
+"buttonShowAlertCancel" = "Huỷ bỏ";
+
+// Screen title
+"titleImageListView" = "Hình ảnh";
+"titleUIRightBarButtonItem" = "Đăng xuất";
+"titleUILeftBarButtonItem" = "Xoá";
+"titleUILeftViewBarButtonItem" = "Thái Lan";
+
+// Name btn
+"nameBtnBlack" = "< Trở lại";

@@ -29,6 +29,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var tableHeight: NSLayoutConstraint!
+    @IBOutlet weak var btnBlackItem: UIButton!
     
     @IBOutlet weak var UITableViewDataJSON: UITableView!
     @IBOutlet weak var templateName: UILabel!
@@ -41,6 +42,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        btnBlackItem.setTitle(Constants.namebtnBlack,for: .normal)
         self.colectionViewSidle.delegate = self
         self.colectionViewSidle.dataSource = self
         self.UITableViewDataJSON.delegate = self

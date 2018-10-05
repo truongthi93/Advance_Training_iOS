@@ -29,7 +29,7 @@ class LoginViewController: UIViewController, LoginViewProtocol {
     
     func showAlert() {
         // create the alert
-        let alert = UIAlertController(title: Constants.titleShowAlertMessage, message: "The App will move screen...", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: Constants.titleShowAlertMessage, message: Constants.showAlertSucessFull, preferredStyle: UIAlertControllerStyle.alert)
         // add an action (button)
         alert.addAction(UIAlertAction(title: Constants.buttonShowAlertOK, style: .default, handler: { _ in
             // Move screen

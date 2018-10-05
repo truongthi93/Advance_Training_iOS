@@ -33,6 +33,9 @@
 		68B11AE021637ADD00CC5924 /* BlankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B11ADE21637ADD00CC5924 /* BlankCell.xib */; };
 		68B11AE321637B9700CC5924 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B11AE121637B9700CC5924 /* TitleCell.swift */; };
 		68B11AE421637B9700CC5924 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68B11AE221637B9700CC5924 /* TitleCell.xib */; };
+		68C78FCF21674A8D002A68F3 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68C78FD121674A8D002A68F3 /* LoginViewController.xib */; };
+		68C78FD821674C1E002A68F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 68C78FDA21674C1E002A68F3 /* Localizable.strings */; };
+		68C78FDD216755C8002A68F3 /* HomeViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C78FDC216755C8002A68F3 /* HomeViewExtension.swift */; };
 		68C87161215B43320062028B /* ContentTemplate.json in Resources */ = {isa = PBXBuildFile; fileRef = 68C87160215B43310062028B /* ContentTemplate.json */; };
 		68C87167215B6CC80062028B /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C87166215B6CC80062028B /* Parameter.swift */; };
 		68C87169215B6D7E0062028B /* ColumnsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C87168215B6D7E0062028B /* ColumnsItem.swift */; };
@@ -64,7 +67,6 @@
 		B9A986C32151FFC80039AE09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A986BD2151FFC80039AE09 /* LoginViewController.swift */; };
 		B9A986C42151FFC80039AE09 /* LoginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A986BE2151FFC80039AE09 /* LoginProtocols.swift */; };
 		B9A986C52151FFC80039AE09 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A986BF2151FFC80039AE09 /* LoginInteractor.swift */; };
-		B9A986C62151FFC80039AE09 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9A986C02151FFC80039AE09 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,13 @@
 		68B11ADE21637ADD00CC5924 /* BlankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlankCell.xib; sourceTree = "<group>"; };
 		68B11AE121637B9700CC5924 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		68B11AE221637B9700CC5924 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		68C78FCE21674A7E002A68F3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		68C78FD321674A8F002A68F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LoginViewController.strings; sourceTree = "<group>"; };
+		68C78FD421674A98002A68F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginViewController.xib; sourceTree = "<group>"; };
+		68C78FD521674AA8002A68F3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LoginViewController.strings; sourceTree = "<group>"; };
+		68C78FD921674C1E002A68F3 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		68C78FDB21674C21002A68F3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		68C78FDC216755C8002A68F3 /* HomeViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewExtension.swift; sourceTree = "<group>"; };
 		68C87160215B43310062028B /* ContentTemplate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ContentTemplate.json; sourceTree = "<group>"; };
 		68C87166215B6CC80062028B /* Parameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parameter.swift; sourceTree = "<group>"; };
 		68C87168215B6D7E0062028B /* ColumnsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnsItem.swift; sourceTree = "<group>"; };
@@ -129,7 +138,6 @@
 		B9A986BD2151FFC80039AE09 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B9A986BE2151FFC80039AE09 /* LoginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocols.swift; sourceTree = "<group>"; };
 		B9A986BF2151FFC80039AE09 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		B9A986C02151FFC80039AE09 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +299,7 @@
 			children = (
 				68CD8A552158D7FC00F83877 /* UIImageViewExtension.swift */,
 				68027015216602590075D897 /* ListViewExtension.swift */,
+				68C78FDC216755C8002A68F3 /* HomeViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 		B9A986982151FEE90039AE09 = {
 			isa = PBXGroup;
 			children = (
+				68C78FDA21674C1E002A68F3 /* Localizable.strings */,
 				68C87160215B43310062028B /* ContentTemplate.json */,
 				B9A986A32151FEE90039AE09 /* DemoVIPER */,
 				B9A986A22151FEE90039AE09 /* Products */,
@@ -366,7 +376,7 @@
 				B9A986BE2151FFC80039AE09 /* LoginProtocols.swift */,
 				B9A986BF2151FFC80039AE09 /* LoginInteractor.swift */,
 				B9A986BD2151FFC80039AE09 /* LoginViewController.swift */,
-				B9A986C02151FFC80039AE09 /* LoginViewController.xib */,
+				68C78FD121674A8D002A68F3 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -443,9 +453,10 @@
 				6890AFA521622FA70049E3A1 /* OneBtnView.xib in Resources */,
 				B9A986B22151FEEB0039AE09 /* LaunchScreen.storyboard in Resources */,
 				68B11AE021637ADD00CC5924 /* BlankCell.xib in Resources */,
+				68C78FD821674C1E002A68F3 /* Localizable.strings in Resources */,
 				B9A986AF2151FEEB0039AE09 /* Assets.xcassets in Resources */,
 				68939105215C6DC100C05639 /* ListViewController.xib in Resources */,
-				B9A986C62151FFC80039AE09 /* LoginViewController.xib in Resources */,
+				68C78FCF21674A8D002A68F3 /* LoginViewController.xib in Resources */,
 				68B11ADC21637AC300CC5924 /* TextCell.xib in Resources */,
 				6893911A215CE52600C05639 /* ListlCollectionViewCell.xib in Resources */,
 				665365DC21520704007D7022 /* HomeViewController.xib in Resources */,
@@ -538,6 +549,7 @@
 				68C8717A215B70C80062028B /* TemplateBtn.swift in Sources */,
 				B9A986AD2151FEE90039AE09 /* DemoVIPER.xcdatamodeld in Sources */,
 				68C87184215B7B950062028B /* ContentTemplate.swift in Sources */,
+				68C78FDD216755C8002A68F3 /* HomeViewExtension.swift in Sources */,
 				68C87186215B81400062028B /* ArrayTransform.swift in Sources */,
 				68C87172215B6FCD0062028B /* ExpireItem.swift in Sources */,
 				68C87176215B70500062028B /* NewItem.swift in Sources */,
@@ -558,10 +570,30 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		68C78FD121674A8D002A68F3 /* LoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C78FD321674A8F002A68F3 /* en */,
+				68C78FD421674A98002A68F3 /* Base */,
+				68C78FD521674AA8002A68F3 /* vi */,
+			);
+			name = LoginViewController.xib;
+			sourceTree = "<group>";
+		};
+		68C78FDA21674C1E002A68F3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68C78FD921674C1E002A68F3 /* vi */,
+				68C78FDB21674C21002A68F3 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B9A986B02151FEEB0039AE09 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B9A986B12151FEEB0039AE09 /* Base */,
+				68C78FCE21674A7E002A68F3 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -573,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -633,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

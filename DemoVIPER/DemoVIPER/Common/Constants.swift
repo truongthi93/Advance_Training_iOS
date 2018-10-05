@@ -14,17 +14,27 @@ class Constants{
     static let correct_password = "123"
     
     // ShowAlet
-    static let showAlertLoginFail = "Email or Password incorrect"
-    static let showAlertAPIFail = "Get data fail"
-    static let showAlertDeleteImage = "Are you sure you want to delete this?"
-    
+    static let showAlertLoginFail = NSLocalizedString("showAlertLoginFail", comment: "")
+    static let showAlertAPIFail = NSLocalizedString("showAlertAPIFail", comment: "")
+    static let showAlertDeleteImage = NSLocalizedString("showAlertDeleteImage", comment: "")
+    static let showAlertSucessFull = NSLocalizedString("showAlertSucessFull", comment: "")
     // Print
-    static let showPrintSaveDataFail  = "Save data fail"
+    static let showPrintSaveDataFail  = NSLocalizedString("showPrintSaveDataFail", comment: "")
     
     // Title ShowAlet
-    static let titleShowAlertMessage = "Message"
-    static let buttonShowAlertOK = "OK"
-    static let buttonShowAlertCancel = "Cancel"
+    static let titleShowAlertMessage = NSLocalizedString("titleShowAlertMessage", comment: "")
+    static let buttonShowAlertOK = NSLocalizedString("buttonShowAlertOK", comment: "")
+    static let buttonShowAlertCancel = NSLocalizedString("buttonShowAlertCancel", comment: "")
+    
+    // Screen title
+    static let titleImageListView = NSLocalizedString("titleImageListView", comment: "")
+    static let titleUIRightBarButtonItem = NSLocalizedString("titleUIRightBarButtonItem", comment: "")
+    static let titleUILeftBarButtonItem = NSLocalizedString("titleUILeftBarButtonItem", comment: "")
+    static let titleUILeftViewBarButtonItem = NSLocalizedString("titleUILeftViewBarButtonItem", comment: "")
+    
+   // Name button
+    static let namebtnBlack = NSLocalizedString("nameBtnBlack", comment: "")
+    
     
     // String nil
     static let stringNil = ""
@@ -41,15 +51,19 @@ class Constants{
     // Nib name
     static let nameImageListView = "ImageListView"
     static let nameImageCollectionViewCell = "ImageCollectionViewCell"
-    static let keyPathAlamofire = "images"
+    static let ListlCollectionViewCell = "ListlCollectionViewCell"
+    static let TextCell = "TextCell"
+    static let TitleCell = "TitleCell"
+    static let BlankCell = "BlankCell"
+    static let TwoBtnView = "TwoBtnView"
+    static let OneBtnView = "OneBtnView"
     
-    // Screen title
-    static let titleImageListView = "Image"
-    static let titleUIRightBarButtonItem = "Logout"
-    static let titleUILeftBarButtonItem = "Delete"
+    static let keyPathAlamofire = "images"
     
     // Name Image
     static let nameImageGoogle = "go"
+    static let nameImageCancel = "btn_cancel"
+    static let nameImageConfirm = "btn_confirm"
     
     // Name UserDefault
     static let nameUserDefaultLoginEmail = "loginEmail"
@@ -57,4 +71,6 @@ class Constants{
     
     // File name
     static let fileNameCRUD = "UserPass.txt"
+    static let fileNameJsonContentTemplate = "UserPass.txt"
+    static let formatFileJson = "json"
 }

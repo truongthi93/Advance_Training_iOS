@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Don't have account? Register"; ObjectID = "1Ph-Hs-geX"; */
+"1Ph-Hs-geX.normalTitle" = "Don't have account? Register";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "MQm-Bk-To1"; */
+"MQm-Bk-To1.normalTitle" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Forgot your password"; ObjectID = "OE0-OI-JWz"; */
+"OE0-OI-JWz.normalTitle" = "Forgot your password";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "cgv-ib-7Mi"; */
+"cgv-ib-7Mi.text" = "OR";
+
+/* Class = "UITextField"; placeholder = "Enter Email"; ObjectID = "sLA-RI-kc1"; */
+"sLA-RI-kc1.placeholder" = "Enter Email";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "x9F-s6-ang"; */
+"x9F-s6-ang.placeholder" = "Enter Password";

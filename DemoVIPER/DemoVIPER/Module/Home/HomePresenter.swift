@@ -31,7 +31,7 @@ class HomePresenter: HomePresenterProtocol, HomeInteractorOutputProtocol {
     }
     
     func callAPIFail() {
-        print("Get images fail.......")
+        print(Constants.showAlertAPIFail)
     }
     
     func deleteLocal() {

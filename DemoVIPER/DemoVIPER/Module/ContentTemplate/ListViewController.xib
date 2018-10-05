@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="UITableViewDataJSON" destination="Wgl-no-3vV" id="ael-pY-1l3"/>
                 <outlet property="UIViewBtn" destination="3PR-Sl-13K" id="qxR-gg-thk"/>
+                <outlet property="btnBlackItem" destination="jDo-8b-TSD" id="ADZ-8r-ESl"/>
                 <outlet property="colectionViewSidle" destination="N8q-AJ-aga" id="6Nw-pB-4kf"/>
                 <outlet property="scrollView" destination="cXV-CZ-R8F" id="k0G-gq-9Na"/>
                 <outlet property="tableHeight" destination="g4A-qT-lLA" id="GoA-TW-w2p"/>
@@ -41,9 +42,9 @@
                             </collectionViewFlowLayout>
                         </collectionView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDo-8b-TSD">
-                            <rect key="frame" x="10" y="15" width="45" height="37.5"/>
+                            <rect key="frame" x="10" y="15" width="30" height="37.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                            <state key="normal" title="&lt; Back">
+                            <state key="normal">
                                 <color key="titleColor" red="0.33725490200000002" green="0.81960784310000001" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                             <connections>

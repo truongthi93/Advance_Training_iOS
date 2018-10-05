@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  DemoVIPER
+
+  Created by Bao Ngo Mau on 10/5/18.
+  Copyright © 2018 UIT. All rights reserved.
+*/
+
+"showAlertLoginFail" = "Email or Password incorrect";
+"showAlertAPIFail" = "Get data fail";
+"showAlertDeleteImage" = "Are you sure you want to delete this?";
+"showAlertSucessFull" = "The App will move screen...";
+// Print
+"showPrintSaveDataFail"  = "Save data fail!";
+
+// Title ShowAlet
+"titleShowAlertMessage" = "Message";
+"buttonShowAlertOK" = "OK";
+"buttonShowAlertCancel" = "Cancel";
+
+// Screen title
+"titleImageListView" = "Image";
+"titleUIRightBarButtonItem" = "Logout";
+"titleUILeftBarButtonItem" = "Delete";
+"titleUILeftViewBarButtonItem" = "View";
+
+// Name btn
+"nameBtnBlack" = "< Black";
