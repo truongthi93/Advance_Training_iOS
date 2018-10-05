@@ -48,11 +48,11 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
         self.UITableViewDataJSON.delegate = self
         self.UITableViewDataJSON.dataSource = self
         
-        colectionViewSidle.register(UINib.init(nibName: "ListlCollectionViewCell" , bundle: nil), forCellWithReuseIdentifier: "ListlCollectionViewCell")
+        colectionViewSidle.register(UINib.init(nibName: Constants.ListlCollectionViewCell , bundle: nil), forCellWithReuseIdentifier: Constants.ListlCollectionViewCell)
         
-        UITableViewDataJSON.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "TextCell")
-        UITableViewDataJSON.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: "TitleCell")
-        UITableViewDataJSON.register(UINib(nibName: "BlankCell", bundle: nil), forCellReuseIdentifier: "BlankCell")
+        UITableViewDataJSON.register(UINib(nibName: Constants.TextCell, bundle: nil), forCellReuseIdentifier: Constants.TextCell)
+        UITableViewDataJSON.register(UINib(nibName: Constants.TitleCell, bundle: nil), forCellReuseIdentifier: Constants.TitleCell)
+        UITableViewDataJSON.register(UINib(nibName: Constants.BlankCell, bundle: nil), forCellReuseIdentifier: Constants.BlankCell)
 
         self.getImageJSONLocal()
         CustomImageView()
@@ -73,7 +73,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
    
     func btnView() {
         // TemplateBtn
-        guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
+        guard let path = Bundle.main.path(forResource: Constants.fileNameJsonContentTemplate, ofType: Constants.formatFileJson) else { return }
         let url = URL(fileURLWithPath: path)
         do {
             let data = try! Data(contentsOf: url)
@@ -84,7 +84,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
             self.UITableViewDataJSON.reloadData()
 
 //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
-            if let customView = Bundle.main.loadNibNamed("TwoBtnView", owner: self, options: nil)?.first as? TwoBtnView{
+            if let customView = Bundle.main.loadNibNamed(Constants.TwoBtnView, owner: self, options: nil)?.first as? TwoBtnView{
                 
                 self.UIViewBtn.addSubview(customView)
                 customView.frame = UIViewBtn.bounds
@@ -95,8 +95,8 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
                 customView.labelImageButtton.text = btn?.templateBtn?.new?.first?.textKey
                 customView.labelImageTwoButtton.text = btn?.templateBtn?.new?[1].textKey
                 
-                customView.btnImageButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.new?.first?.icon) ?? "btn_cancel"), for: .normal)
-                customView.btnImageTwoButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.new?[1].icon) ?? "btn_confirm"), for: .normal)
+                customView.btnImageButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.new?.first?.icon) ?? Constants.nameImageCancel), for: .normal)
+                customView.btnImageTwoButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.new?[1].icon) ?? Constants.nameImageConfirm), for: .normal)
             }
         }
         catch {
@@ -151,7 +151,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
         )
     }
     func getImageJSONLocal() {
-        guard let path = Bundle.main.path(forResource: "ContentTemplate", ofType: "json") else { return }
+        guard let path = Bundle.main.path(forResource: Constants.fileNameJsonContentTemplate, ofType: Constants.formatFileJson) else { return }
         let url = URL(fileURLWithPath: path)
         do {
             let data = try! Data(contentsOf: url)

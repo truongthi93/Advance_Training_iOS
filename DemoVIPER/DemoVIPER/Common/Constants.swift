@@ -71,6 +71,6 @@ class Constants{
     
     // File name
     static let fileNameCRUD = "UserPass.txt"
-    static let fileNameJsonContentTemplate = "UserPass.txt"
+    static let fileNameJsonContentTemplate = "ContentTemplate"
     static let formatFileJson = "json"
 }
