@@ -21,7 +21,6 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
         self.router = router
     }
 
-
     func btnLoginClick() {
         self.interactor?.callAPILogin()
     }

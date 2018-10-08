@@ -14,6 +14,9 @@
 		665365DB21520704007D7022 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 665365D521520704007D7022 /* HomeViewController.swift */; };
 		665365DC21520704007D7022 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 665365D621520704007D7022 /* HomeViewController.xib */; };
 		68027016216602590075D897 /* ListViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68027015216602590075D897 /* ListViewExtension.swift */; };
+		683718B5216AF7D400523406 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683718B4216AF7D400523406 /* LoginViewControllerTest.swift */; };
+		683718B7216AFB2D00523406 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683718B6216AFB2D00523406 /* HomeViewControllerTest.swift */; };
+		683718B9216AFB4D00523406 /* ListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683718B8216AFB4D00523406 /* ListViewControllerTest.swift */; };
 		6890AFA521622FA70049E3A1 /* OneBtnView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6890AFA421622FA70049E3A1 /* OneBtnView.xib */; };
 		6890AFA721622FEC0049E3A1 /* OneBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6890AFA621622FEC0049E3A1 /* OneBtnView.swift */; };
 		6890AFA9216230330049E3A1 /* TwoBtnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6890AFA8216230330049E3A1 /* TwoBtnView.swift */; };
@@ -69,6 +72,16 @@
 		B9A986C52151FFC80039AE09 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A986BF2151FFC80039AE09 /* LoginInteractor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		683718AF216AEF2800523406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9A986992151FEE90039AE09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9A986A02151FEE90039AE09;
+			remoteInfo = DemoVIPER;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		16D7AB214AC9A5F458C6BEA2 /* Pods_DemoVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9DFC8649125312347425C8 /* Pods-DemoVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoVIPER.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoVIPER/Pods-DemoVIPER.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +92,11 @@
 		665365D521520704007D7022 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		665365D621520704007D7022 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		68027015216602590075D897 /* ListViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewExtension.swift; sourceTree = "<group>"; };
+		683718AA216AEF2800523406 /* DemoVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		683718AE216AEF2800523406 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683718B4216AF7D400523406 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
+		683718B6216AFB2D00523406 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
+		683718B8216AFB4D00523406 /* ListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTest.swift; sourceTree = "<group>"; };
 		6890AFA421622FA70049E3A1 /* OneBtnView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OneBtnView.xib; sourceTree = "<group>"; };
 		6890AFA621622FEC0049E3A1 /* OneBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBtnView.swift; sourceTree = "<group>"; };
 		6890AFA8216230330049E3A1 /* TwoBtnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoBtnView.swift; sourceTree = "<group>"; };
@@ -141,6 +159,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		683718A7216AEF2800523406 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A9869E2151FEE90039AE09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -173,6 +198,17 @@
 				665365D621520704007D7022 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		683718AB216AEF2800523406 /* DemoVIPERTests */ = {
+			isa = PBXGroup;
+			children = (
+				683718AE216AEF2800523406 /* Info.plist */,
+				683718B4216AF7D400523406 /* LoginViewControllerTest.swift */,
+				683718B6216AFB2D00523406 /* HomeViewControllerTest.swift */,
+				683718B8216AFB4D00523406 /* ListViewControllerTest.swift */,
+			);
+			path = DemoVIPERTests;
 			sourceTree = "<group>";
 		};
 		6890AF9521621A490049E3A1 /* TemplateBtn */ = {
@@ -327,6 +363,7 @@
 				68C78FDA21674C1E002A68F3 /* Localizable.strings */,
 				68C87160215B43310062028B /* ContentTemplate.json */,
 				B9A986A32151FEE90039AE09 /* DemoVIPER */,
+				683718AB216AEF2800523406 /* DemoVIPERTests */,
 				B9A986A22151FEE90039AE09 /* Products */,
 				FD356BBE3B82FFC4CFDD838F /* Pods */,
 				5459389864419D3DD24519D0 /* Frameworks */,
@@ -337,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A986A12151FEE90039AE09 /* DemoVIPER.app */,
+				683718AA216AEF2800523406 /* DemoVIPERTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +431,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		683718A9216AEF2800523406 /* DemoVIPERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 683718B3216AEF2800523406 /* Build configuration list for PBXNativeTarget "DemoVIPERTests" */;
+			buildPhases = (
+				683718A6216AEF2800523406 /* Sources */,
+				683718A7216AEF2800523406 /* Frameworks */,
+				683718A8216AEF2800523406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				683718B0216AEF2800523406 /* PBXTargetDependency */,
+			);
+			name = DemoVIPERTests;
+			productName = DemoVIPERTests;
+			productReference = 683718AA216AEF2800523406 /* DemoVIPERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B9A986A02151FEE90039AE09 /* DemoVIPER */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A986B62151FEEB0039AE09 /* Build configuration list for PBXNativeTarget "DemoVIPER" */;
@@ -418,10 +474,15 @@
 		B9A986992151FEE90039AE09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = UIT;
 				TargetAttributes = {
+					683718A9216AEF2800523406 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+						TestTargetID = B9A986A02151FEE90039AE09;
+					};
 					B9A986A02151FEE90039AE09 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -441,11 +502,19 @@
 			projectRoot = "";
 			targets = (
 				B9A986A02151FEE90039AE09 /* DemoVIPER */,
+				683718A9216AEF2800523406 /* DemoVIPERTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		683718A8216AEF2800523406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A9869F2151FEE90039AE09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +584,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		683718A6216AEF2800523406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				683718B5216AF7D400523406 /* LoginViewControllerTest.swift in Sources */,
+				683718B9216AFB4D00523406 /* ListViewControllerTest.swift in Sources */,
+				683718B7216AFB2D00523406 /* HomeViewControllerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B9A9869D2151FEE90039AE09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -569,6 +648,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		683718B0216AEF2800523406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9A986A02151FEE90039AE09 /* DemoVIPER */;
+			targetProxy = 683718AF216AEF2800523406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		68C78FD121674A8D002A68F3 /* LoginViewController.xib */ = {
 			isa = PBXVariantGroup;
@@ -601,6 +688,47 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		683718B1216AEF2800523406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DemoVIPERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BaoNgo.com.DemoVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVIPER.app/DemoVIPER";
+			};
+			name = Debug;
+		};
+		683718B2216AEF2800523406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DemoVIPERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BaoNgo.com.DemoVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DemoVIPER.app/DemoVIPER";
+			};
+			name = Release;
+		};
 		B9A986B42151FEEB0039AE09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -758,6 +886,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		683718B3216AEF2800523406 /* Build configuration list for PBXNativeTarget "DemoVIPERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				683718B1216AEF2800523406 /* Debug */,
+				683718B2216AEF2800523406 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B9A9869C2151FEE90039AE09 /* Build configuration list for PBXProject "DemoVIPER" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -17,6 +17,8 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         super.viewDidLoad()
     }
 
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtEmail: UITextField!
     @IBAction func login(_ sender: Any) {
         self.presenter?.btnLoginClick()
     }
