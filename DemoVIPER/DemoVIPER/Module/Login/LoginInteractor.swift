@@ -15,7 +15,6 @@ class LoginInteractor: LoginInteractorInputProtocol {
         // Alamofire....
         self.presenter?.loginSucess()
     }
-    
 
     weak var presenter: LoginInteractorOutputProtocol?
 }

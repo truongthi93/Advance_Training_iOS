@@ -28,7 +28,6 @@ class LoginViewController: UIViewController, LoginViewProtocol {
         showAlert()
     }
     
-    
     func showAlert() {
         // create the alert
         let alert = UIAlertController(title: Constants.titleShowAlertMessage, message: Constants.showAlertSucessFull, preferredStyle: UIAlertControllerStyle.alert)

@@ -14,13 +14,13 @@ class LoginPresenter: LoginPresenterProtocol, LoginInteractorOutputProtocol {
     weak private var view: LoginViewProtocol?
     var interactor: LoginInteractorInputProtocol?
     private let router: LoginWireframeProtocol
-
+    
     init(interface: LoginViewProtocol, interactor: LoginInteractorInputProtocol?, router: LoginWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
     }
-
+    
     func btnLoginClick() {
         self.interactor?.callAPILogin()
     }

@@ -47,7 +47,6 @@ extension ListViewController : UITableViewDataSource , UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let list = self.contentTemplate?.templateBody?.templateLines else {
             return UITableViewCell()
         }

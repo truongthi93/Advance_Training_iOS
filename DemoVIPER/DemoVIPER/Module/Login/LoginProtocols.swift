@@ -23,22 +23,22 @@ protocol LoginPresenterProtocol: class {
 
 //MARK: Interactor -
 protocol LoginInteractorOutputProtocol: class {
-
+    
     /* Interactor -> Presenter */
     func loginSucess()
 }
 
 protocol LoginInteractorInputProtocol: class {
-
+    
     var presenter: LoginInteractorOutputProtocol?  { get set }
-
+    
     /* Presenter -> Interactor */
     func callAPILogin()
 }
 
 //MARK: View -
 protocol LoginViewProtocol: class {
-
+    
     var presenter: LoginPresenterProtocol?  { get set }
     /* Presenter -> ViewController */
     func loginSuccess()

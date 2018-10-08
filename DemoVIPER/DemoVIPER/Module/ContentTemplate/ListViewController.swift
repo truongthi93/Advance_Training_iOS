@@ -36,7 +36,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
     @IBOutlet weak var templateVersion: UILabel!
     @IBOutlet weak var colectionViewSidle: UICollectionView!
     @IBAction func btnBackView(_ sender: Any) {
-       self.presenter?.dimistView()
+        self.presenter?.dimistView()
     }
     @IBOutlet weak var UIViewBtn: UIView!
     
@@ -53,24 +53,24 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
         UITableViewDataJSON.register(UINib(nibName: Constants.TextCell, bundle: nil), forCellReuseIdentifier: Constants.TextCell)
         UITableViewDataJSON.register(UINib(nibName: Constants.TitleCell, bundle: nil), forCellReuseIdentifier: Constants.TitleCell)
         UITableViewDataJSON.register(UINib(nibName: Constants.BlankCell, bundle: nil), forCellReuseIdentifier: Constants.BlankCell)
-
+        
         self.getImageJSONLocal()
         CustomImageView()
         btnView()
         
-        tableHeight.constant = self.view.frame.height-64
-        self.UITableViewDataJSON.isScrollEnabled = false
-        //no need to write following if checked in storyboard
-        self.scrollView.bounces = false
-        self.UITableViewDataJSON.bounces = true
-        
-        func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            if self.UITableViewDataJSON.contentOffset.y == self.scrollView.contentOffset.y {
-                UITableViewDataJSON.isScrollEnabled = true
-            }
-        }
+        //        tableHeight.constant = self.view.frame.height-64
+        //        self.UITableViewDataJSON.isScrollEnabled = false
+        //        //no need to write following if checked in storyboard
+        //        self.scrollView.bounces = false
+        //        self.UITableViewDataJSON.bounces = true
+        //
+        //        func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        //            if self.UITableViewDataJSON.contentOffset.y == self.scrollView.contentOffset.y {
+        //                UITableViewDataJSON.isScrollEnabled = true
+        //            }
+        //        }
     }
-   
+    
     func btnView() {
         // TemplateBtn
         guard let path = Bundle.main.path(forResource: Constants.fileNameJsonContentTemplate, ofType: Constants.formatFileJson) else { return }
@@ -82,16 +82,20 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
             
             self.contentTemplate = btn
             self.UITableViewDataJSON.reloadData()
-
-//        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
+            
+            //One button
+            //        if let customView = Bundle.main.loadNibNamed("OneBtnView", owner: self, options: nil)?.first as? OneBtnView{
+            // Two button
             if let customView = Bundle.main.loadNibNamed(Constants.TwoBtnView, owner: self, options: nil)?.first as? TwoBtnView{
                 
                 self.UIViewBtn.addSubview(customView)
                 customView.frame = UIViewBtn.bounds
                 customView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
                 
-//              customView.labelImageOneButtton.text = btn?.templateBtn?.cancel?.first?.textKey
-//              customView.btnImageOneButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
+                // One button
+                // customView.labelImageOneButtton.text = btn?.templateBtn?.cancel?.first?.textKey
+                //  customView.btnImageOneButton.setBackgroundImage(UIImage(named: (btn?.templateBtn?.cancel?.first?.icon) ?? "btn_cancel"), for: .normal)
+                // Two button
                 customView.labelImageButtton.text = btn?.templateBtn?.new?.first?.textKey
                 customView.labelImageTwoButtton.text = btn?.templateBtn?.new?[1].textKey
                 
@@ -122,7 +126,7 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
         colectionViewSidle.setCollectionViewLayout(layout, animated: false)
         colectionViewSidle.isPagingEnabled = true
         colectionViewSidle.alwaysBounceVertical = false
-
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -150,20 +154,21 @@ class ListViewController: UIViewController, ListViewProtocol, UIScrollViewDelega
             alpha: CGFloat(1.0)
         )
     }
+    
     func getImageJSONLocal() {
         guard let path = Bundle.main.path(forResource: Constants.fileNameJsonContentTemplate, ofType: Constants.formatFileJson) else { return }
         let url = URL(fileURLWithPath: path)
         do {
             let data = try! Data(contentsOf: url)
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-//            print(json)
+            //            print(json)
             // ContentTemplate
             let user = Mapper<ContentTemplate>().map(JSONObject: json)
             print(user?.templateID ?? "")
             self.templateName.text = user?.templateID
             self.templateVersion.text = "\(String(describing: user?.templateVersion ?? 0))"
             self.imageList = user?.templateBody?.iframeProperty?.images
-
+            
             self.colectionViewSidle.reloadData()
         }
         catch {

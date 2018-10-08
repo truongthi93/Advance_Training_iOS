@@ -28,7 +28,7 @@ protocol HomePresenterProtocol: class {
 
 //MARK: Interactor -
 protocol HomeInteractorOutputProtocol: class {
-
+    
     /* Interactor -> Presenter */
     func callAPISuccess(list: [SplashbaseImage])
     func callAPIFail()
@@ -36,9 +36,9 @@ protocol HomeInteractorOutputProtocol: class {
 }
 
 protocol HomeInteractorInputProtocol: class {
-
+    
     var presenter: HomeInteractorOutputProtocol?  { get set }
-
+    
     /* Presenter -> Interactor */
     func callAPIGetImages()
     func deleteLocalDataImages()
@@ -47,9 +47,9 @@ protocol HomeInteractorInputProtocol: class {
 
 //MARK: View -
 protocol HomeViewProtocol: class {
-
+    
     var presenter: HomePresenterProtocol?  { get set }
-
+    
     /* Presenter -> ViewController */
     func getImageFail()
     func getImageSuccess(list: [SplashbaseImage])

@@ -28,7 +28,7 @@ class HomeInteractor: HomeInteractorInputProtocol {
             }
         }
     }
-
+    
     func getImageFromAPI(completion: @escaping (_ result: Bool, _ images: [SplashbaseImage]) -> Void) {
         let URL = Constants.linkImage
         Alamofire.request(URL).responseArray(keyPath: Constants.keyPathAlamofire) { (response: DataResponse<[SplashbaseImage]>) in
@@ -49,5 +49,5 @@ class HomeInteractor: HomeInteractorInputProtocol {
         let images = CoreDataImage.shared.fetchData()
         self.presenter?.getImageLocalSuccess(list: images ?? [])
     }
-   
+    
 }

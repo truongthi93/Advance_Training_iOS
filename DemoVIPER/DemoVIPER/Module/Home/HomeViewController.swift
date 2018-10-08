@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     var imageList : [SplashbaseImage] = []
     
-	override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionViewImage.delegate = self
         self.collectionViewImage.dataSource = self
@@ -71,9 +71,9 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         
         // Present dialog message to user
         self.present(dialogMessage, animated: true, completion: nil)
-
+        
     }
-
+    
     @objc func logoutButtonClick() {
         self.presenter?.logOut()
     }
@@ -81,7 +81,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     @objc func presentViewImage() {
         self.presenter?.ImageLoad()
     }
-
+    
     func setUpNavigationBar() {
         self.navigationItem.title = Constants.titleImageListView
         let logout = UIBarButtonItem(title: Constants.titleUIRightBarButtonItem, style: .plain, target: self, action: #selector(HomeViewController.logoutButtonClick))
@@ -91,7 +91,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         
         let viewImage = UIBarButtonItem(title: Constants.titleUILeftViewBarButtonItem, style: .plain, target: self, action: #selector(HomeViewController.presentViewImage))
         self.navigationItem.leftBarButtonItems  = [delete, viewImage]
-
+        
     }
     
     func getImageFail() {

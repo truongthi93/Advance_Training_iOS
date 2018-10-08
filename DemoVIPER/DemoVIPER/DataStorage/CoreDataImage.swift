@@ -29,7 +29,6 @@ class CoreDataImage {
                 print("Could not save id), \(error), \(error.userInfo)")
             }
         }
-    
     }
     
     func fetchData() -> [SplashbaseImage]? {
@@ -47,7 +46,6 @@ class CoreDataImage {
             var image = SplashbaseImage()
             image.url = (user as! DataImage).url
             image.large_url = (user as! DataImage).large_url
-            
             list.append(image)
         }
         return list
