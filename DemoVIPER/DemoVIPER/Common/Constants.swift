@@ -26,6 +26,9 @@ class Constants{
     static let buttonShowAlertOK = NSLocalizedString("buttonShowAlertOK", comment: "")
     static let buttonShowAlertCancel = NSLocalizedString("buttonShowAlertCancel", comment: "")
     
+    // Title color font
+    static let titleColorFont = "#000000"
+    
     // Screen title
     static let titleImageListView = NSLocalizedString("titleImageListView", comment: "")
     static let titleUIRightBarButtonItem = NSLocalizedString("titleUIRightBarButtonItem", comment: "")

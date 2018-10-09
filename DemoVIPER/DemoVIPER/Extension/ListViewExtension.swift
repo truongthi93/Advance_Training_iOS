@@ -19,7 +19,7 @@ extension ListViewController : UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListlCollectionViewCell",for:indexPath as IndexPath) as! ListlCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.ListlCollectionViewCell,for:indexPath as IndexPath) as! ListlCollectionViewCell
         if let image = imageList?[indexPath.row] {
             cell.listViewImage.imageFromUrl(urlString: image)
             //cell.imageView.imageFromUrl(urlString: image)
@@ -55,27 +55,27 @@ extension ListViewController : UITableViewDataSource , UITableViewDelegate{
         
         switch line.columns?.first?.contentType {
         case contentType.titlenormal.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TitleCell", for: indexPath) as! TitleCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TitleCell, for: indexPath) as! TitleCell
             cell.labelTitleCell.text = line.columns?.first?.parameter?.title
             cell.labelDescriptionCell.text = line.columns?.first?.parameter?.timeStamp
-            cell.labelTitleCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.titleFontColor ?? "#000000")
-            cell.labelDescriptionCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.timeStampFontColor ?? "#000000")
+            cell.labelTitleCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.titleFontColor ?? Constants.titleColorFont)
+            cell.labelDescriptionCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.timeStampFontColor ?? Constants.titleColorFont)
             
-            let image = UIImage(named: line.columns?.first?.parameter?.icon ?? "btn_cancel")
+            let image = UIImage(named: line.columns?.first?.parameter?.icon ?? Constants.nameImageCancel)
             cell.imageTitleCell.image = image
-            cell.backgroundView?.backgroundColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.backgroundColor ?? "#000000")
+            cell.backgroundView?.backgroundColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.backgroundColor ?? Constants.titleColorFont)
             //            let image = UIImage(named: "\(line.columns?.first?.parameter?.icon)")
             //            let imageView = UIImageView(image: image)
             //            cell.imageTitleCell.addSubview(imageView)
             
             return cell
         case contentType.text.rawValue:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TextCell, for: indexPath) as! TextCell
             cell.labelTextCell.text = line.columns?.first?.parameter?.text
-            cell.labelTextCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.fontColor ?? "#000000")
+            cell.labelTextCell.textColor = self.hexStringToUIColor(hex: line.columns?.first?.parameter?.fontColor ?? Constants.titleColorFont)
             return cell
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BlankCell", for: indexPath) as! BlankCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.BlankCell, for: indexPath) as! BlankCell
             return cell
         }
     }

@@ -15,8 +15,7 @@ class ContentTemplate: Mappable {
     var templateBtn: TemplateBtn?
     var templateID: String? = ""
     var templateVersion: Int? = 0
-    
-    
+
     init() {
     }
     
